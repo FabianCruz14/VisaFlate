@@ -29,7 +29,7 @@ body {
     margin-bottom: 20px;
   }
   
-  .navbar-brand h1 { /* Restaurant name */
+  .navbar-brand h1 { 
     color: #E6CB05;
     font-size: 27px;
     text-transform: uppercase;
