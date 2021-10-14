@@ -30,7 +30,6 @@ body {
   width: 45px;
   height: 45px;
   margin: 5px 5px 5px 5px;
-  text-align: center;
 }
 .navbar-brand {
     margin-top: 20px;
@@ -50,14 +49,10 @@ body {
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
-
+  
 #nav-list a {
   color: #f5c405;
   text-align: center;
-}
-
-#nav-list a span {
-  font-size: 1.8em;
 }
 
 #nav-list a:hover {
