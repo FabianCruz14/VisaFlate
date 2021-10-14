@@ -30,6 +30,7 @@ body {
   width: 45px;
   height: 45px;
   margin: 5px 5px 5px 5px;
+  text-align: center;
 }
 .navbar-brand {
     margin-top: 20px;
