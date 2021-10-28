@@ -5,14 +5,11 @@
 }
 body {
     font-size: 16px;
-    background-color: #ffffff;
+    background-color: #F8F6E2;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Parte correspiendente CSS de la pagina Contacto */
-.body_contact{
-  background-color: #F8F6E2;
-}
 
 .div_ubicacion{
   width: 600px;
@@ -58,6 +55,8 @@ body {
 }
 
 /*Aqui termina la parte CSS de la pagina Contacto */
+
+/******************************* CSS para el header *******************************/
 #header-nav {
     background-color: #004aad;
     border-radius: 0;
@@ -67,7 +66,7 @@ body {
 
 #logo-img {
     background: url('../images/logo.png') no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 70px;
     height: 70px;
     margin: 10px 15px 10px 0px;
@@ -76,10 +75,15 @@ body {
 #cart-img {
   background: url('../images/cart.png') no-repeat;
   background-size: contain;
-  width: 45px;
-  height: 45px;
-  margin: 5px 5px 5px 5px;
+  width: 40px;
+  height: 40px;
 }
+
+#cart {
+  padding: 0px;
+  text-align: center;
+}
+
 .navbar-brand {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -95,6 +99,7 @@ body {
   margin-bottom: 0;
   line-height: 0.75em;
 }
+
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
@@ -102,10 +107,17 @@ body {
 #nav-list a {
   color: #f5c405;
   text-align: center;
+  height: 40px;
+  line-height: 50%;
 }
 
 #nav-list a:hover {
   text-decoration: underline;
+}
+
+#nav-list li {
+  height: 40px;
+  margin-top: 4.5%;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
@@ -114,4 +126,61 @@ body {
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -60px;
+}
+#s-up{  
+  background-color: dodgerblue;
+  border-radius: 20px;
+}
+/********** Large devices only **********/
+@media (min-width: 1200px){
+
+}
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand h1 {
+    font-size: 24px;
+  }
+  #nav-list {
+    width: 550px;
+  }
+  #nav-list a{
+    font-size: 14px;
+  }
+  #nav-list a div{
+    margin-top: 4px;
+    height: 35px;
+    width: 35px;
+  } 
+}
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  .navbar-brand { 
+   margin-left: 35vw; /* 1vw = 1% of viewport width */
+  }
+  #nav-list li {
+    height: 30px;
+    margin: 1px;
+    
+  }
+  #nav-list li a {
+    height: 30px;
+    font-size: 14px;
+    padding-top: 11px;
+  }
+  #cart {
+    padding: 0px!important;
+  }
+  #cart-img {
+    height: 30px;
+    width: 30px;
+    margin-right: 50%;
+    position: relative;
+    left: 47%;
+  }
+   
 }
