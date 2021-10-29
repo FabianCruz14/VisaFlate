@@ -111,10 +111,6 @@ body {
   line-height: 50%;
 }
 
-#nav-list a:hover {
-  text-decoration: underline;
-}
-
 #nav-list li {
   height: 40px;
   margin-top: 4.5%;
