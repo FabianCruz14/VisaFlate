@@ -127,13 +127,27 @@ body {
   background-color: dodgerblue;
   border-radius: 20px;
 }
+
+.container .jumbotron {
+  box-shadow: 0 0 50px #F8F6E2;
+  border: 2px solid #F8F6E2;
+}
+
 /********** Large devices only **********/
 @media (min-width: 1200px){
-
+  /* HOME PAGE */
+  .container .jumbotron {
+    background: url('../images/jumbotron_1200.jpeg') no-repeat; 
+    height: 600px;
+  }
 }
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-  
+  /* HOME PAGE */
+  .container .jumbotron {
+    background: url('../images/jumbotron_992.jpeg') no-repeat; 
+    height: 558px;
+  }
 }
 
 /********** Small devices only **********/
@@ -152,6 +166,12 @@ body {
     height: 35px;
     width: 35px;
   } 
+
+  /* HOME PAGE */
+  .container .jumbotron {
+    background: url('../images/jumbotron_768.jpeg') no-repeat; 
+    height: 432px;
+  }
 }
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
@@ -178,5 +198,12 @@ body {
     position: relative;
     left: 47%;
   }
-   
+
+  /* HOME PAGE */
+  .container .jumbotron {
+    padding: 0;
+  }
 }
+
+/* END HEADER */
+
