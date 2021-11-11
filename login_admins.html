@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- para que las versiones del explorador usen la ultima version-->
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- para que funcione en la escala de any device-->
-    <title>Carrito</title>
+    <title>Iniciar sesión</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -67,7 +67,26 @@
         </nav><!-- #header-nav -->
     </header>
 
+    <form action="index.html" class="formulario">
+        <h1 id="login-title">Bienvenido, Admin</h1>
+        <div class="container-login">
+
+            <div class="email-box">
+                <i class="fas fa-envelope icon"></i>
+                <input type="text" placeholder="ID" id="ide" name="identifier">
+            </div>
+
+            <div class="pass-box">
+                <i class="fas fa-key icon"></i>
+                <input type="password" placeholder="Contraseña" id="pass" name="password">
+            </div>
+            <input type="submit" value="Ingresar" class="button">
+            
+        </div>
+    </form>
+
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="https://kit.fontawesome.com/6212ed9a55.js" crossorigin="anonymous"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

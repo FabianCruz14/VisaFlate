@@ -228,111 +228,9 @@ body {
   opacity: .8;
 }
 
-/********** Large devices only **********/
-@media (min-width: 1200px){
-  /* HOME PAGE */
-  .container .jumbotron {
-    background: url('../images/jumbotron_1200.jpeg') no-repeat; 
-    height: 600px;
-  }
-}
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* HOME PAGE */
-  .container .jumbotron {
-    background: url('../images/jumbotron_992.jpeg') no-repeat; 
-    height: 558px;
-  }
-  .jumbotron h1 {
-    font-size: 30px;
-  }
-}
+/* END HOME PAGE*/
 
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar-brand h1 {
-    font-size: 24px;
-  }
-  .jumbotron h1 {
-    font-size: 25px;
-  }
-  #nav-list {
-    width: 550px;
-  }
-  #nav-list a{
-    font-size: 14px;
-  }
-  #nav-list a div{
-    margin-top: 4px;
-    height: 35px;
-    width: 35px;
-  } 
-
-  /* HOME PAGE */
-  .container .jumbotron {
-    background: url('../images/jumbotron_768.jpeg') no-repeat; 
-    height: 436px;
-  }
-}
-/********** Extra small devices only **********/
-@media (max-width: 767px) {
-  .container .jumbotron {
-    background: url('../images/jumbotron_768.jpeg') no-repeat; 
-    height: 410px;
-  }
-  .navbar-brand { 
-   margin-left: 35vw; /* 1vw = 1% of viewport width */
-  }
-  .jumbotron h1 {
-    font-size: 20px;
-  }
-  #nav-list li {
-    height: 30px;
-    margin: 1px;
-    
-  }
-  #nav-list li a {
-    height: 30px;
-    font-size: 14px;
-    padding-top: 11px;
-  }
-  #cart {
-    padding: 0px!important;
-  }
-  #cart-img {
-    height: 30px;
-    width: 30px;
-    margin-right: 50%;
-    position: relative;
-    left: 47%;
-  }
-
-  /* Footer */
-.panel-footer section {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.panel-footer section:nth-child(3) {
-  margin-bottom: 0; /* margin already exists on the whole row */
-}
-.panel-footer section hr {
-  width: 50%;
-}
-/* End Footer */
-}
-
-@media (max-width: 375px) {
-  .navbar-brand h1 {
-    font-size: 20px;
-  }
-  .navbar-brand {
-    margin-left: 30%;
-  }
-}
-
-
-
-/* Products css */
+/* PRODUCTS PAGE*/
 .heading-categorias{
   padding-left: 430px;
   font-weight: 550;
@@ -414,6 +312,190 @@ hr{
   width:60%;
   margin: auto;
 }
+
+/*END PRODUCTS PAGE*/
+
+/* LOGIN PAGE*/
+.formulario{
+  background:#ffdb01;
+  padding: 3px;
+  margin: auto;
+  width: 500px;
+  margin-top: 180px;
+  border-radius: 5%;
+}
+
+.email-box, .pass-box, .name-box{
+  margin-top: 15px;
+  border: none;
+}
+
+.container-login{
+  width: 100%;
+  padding: 15px;
+}
+
+#login-title{
+  text-align: center;
+  color:#293fc9;
+  font-size: 40px;
+}
+
+input[type="text"],
+input[type="password"]{
+  font-size: 20px;
+  width: 82%;
+  padding: 10px;
+  border: none;
+}
+
+.icon{
+  min-width: 50px;
+  text-align: center;
+  color: #293fc9;
+}
+
+.button{
+  margin-top: 2em ;
+  border:none;
+  width: 100%;
+  color: #ffdb01;
+  font: 20px;
+  background: #293fc9;
+  padding-top: 30px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover{
+  background: #000;
+}
+
+p{
+  text-align: center;
+}
+
+.link{
+  text-decoration: none;
+  color:#1a2537;
+  font-weight: 600;
+}
+
+.link:hover{
+  color: #293fc9;
+}
+
+/* END LOGIN PAGE*/
+
+
+/*DIFFERENT SIZES*/
+
+/********** Large devices only **********/
+@media (min-width: 1200px){
+  /* HOME PAGE */
+  .container .jumbotron {
+    background: url('../images/jumbotron_1200.jpeg') no-repeat; 
+    height: 600px;
+  }
+}
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* HOME PAGE */
+  .container .jumbotron {
+    background: url('../images/jumbotron_992.jpeg') no-repeat; 
+    height: 558px;
+  }
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand h1 {
+    font-size: 24px;
+  }
+  .jumbotron h1 {
+    font-size: 25px;
+  }
+  #nav-list {
+    width: 550px;
+  }
+  #nav-list a{
+    font-size: 14px;
+  }
+  #nav-list a div{
+    margin-top: 4px;
+    height: 35px;
+    width: 35px;
+  } 
+
+  /* HOME PAGE */
+  .container .jumbotron {
+    background: url('../images/jumbotron_768.jpeg') no-repeat; 
+    height: 436px;
+  }
+}
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  .container .jumbotron {
+    background: url('../images/jumbotron_768.jpeg') no-repeat; 
+    height: 410px;
+  }
+  .navbar-brand { 
+   margin-left: 35vw; /* 1vw = 1% of viewport width */
+  }
+  .jumbotron h1 {
+    font-size: 20px;
+  }
+  #nav-list li {
+    height: 30px;
+    margin: 1px;
+    
+  }
+  #nav-list li a {
+    height: 30px;
+    font-size: 14px;
+    padding-top: 11px;
+  }
+  #cart {
+    padding: 0px!important;
+  }
+  #cart-img {
+    height: 30px;
+    width: 30px;
+    margin-right: 50%;
+    position: relative;
+    left: 47%;
+  }
+
+  /* Footer */
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /* margin already exists on the whole row */
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+  /* End Footer */
+}
+
+@media (max-width: 375px) {
+  .navbar-brand h1 {
+    font-size: 20px;
+  }
+  .navbar-brand {
+    margin-left: 30%;
+  }
+}
+
+
+
+/* Products css */
+
 
 #meet-us:hover {
   animation: shake 0.82s;
