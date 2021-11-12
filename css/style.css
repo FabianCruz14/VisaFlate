@@ -164,19 +164,9 @@ body {
   box-shadow: 0 0 50px #F8F6E2;
   border: 2px solid #F8F6E2;
   position: relative;
+  background-position: center;
 }
 
-.jumbotron h1 {
-  color: #000000;
-  font-size: 40px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #000000;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 0.75em;
-  text-align: center;
-}
 
 #meet-us {
   font-size: 24px;
@@ -395,7 +385,7 @@ p{
   /* HOME PAGE */
   .container .jumbotron {
     background: url('../images/jumbotron_1200.jpeg') no-repeat; 
-    height: 600px;
+    height: 675px;
   }
 }
 /********** Medium devices only **********/
@@ -405,18 +395,12 @@ p{
     background: url('../images/jumbotron_992.jpeg') no-repeat; 
     height: 558px;
   }
-  .jumbotron h1 {
-    font-size: 30px;
-  }
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-brand h1 {
     font-size: 24px;
-  }
-  .jumbotron h1 {
-    font-size: 25px;
   }
   #nav-list {
     width: 550px;
@@ -444,9 +428,6 @@ p{
   }
   .navbar-brand { 
    margin-left: 35vw; /* 1vw = 1% of viewport width */
-  }
-  .jumbotron h1 {
-    font-size: 20px;
   }
   #nav-list li {
     height: 30px;
