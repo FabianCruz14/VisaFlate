@@ -13,15 +13,24 @@
         $email=$_POST['email'];
         $password=$_POST['password'];
 
-        $query = "SELECT username FROM user WHERE email='$email'";
-        $res = mysqli_query($connection, $query) or die ("Query error");
+        $euser = "SELECT email FROM usuarios WHERE email='$email'"; #euser = existe usuario
+        if($euser == $user){    #si el email es correcto
+            $cpass = "SELECT pass FROM usuarios WHERE email='$email'"; #CPASS = CORRECT PASSWORD
+            if($cpass == $password){    #si el usuario ingreso bien email y password
+                $query = "SELECT username FROM usuarios WHERE email='$email' AND pass='$password'";
+                $res = mysqli_query($connection, $query) or die ("Query error");
 
-        header("Location: contact.html");
-        mysqli_close($connection);
+                header("Location: index_in.html");
+                mysqli_close($connection);
+            }
+            else{
+                echo '<script type="text/javascript"> alert("Contraseña incorrecta");</script>';
+            }
+        }
+        else{
+            echo '<script type="text/javascript">alert("Email incorrecto");</script>';
+        }
         
-        # BUSQUEDA
-
-
         
 
         #$query="INSERT INTO users values ('$username', '$email', '$password')";
@@ -31,8 +40,10 @@
 
         #$res=mysqli_query($connection, $query) or die("Query error");
 
-        # forma de presentar resultados
+        #forma de presentar resultados
         #$table="<table>
+
+        
         #<tr><th>Username</th>
         #<th>Email</th>
         #<th>Password</th>
