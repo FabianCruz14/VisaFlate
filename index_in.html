@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+    <!-- JS to retrieve data from DB -->
+    <script type="text/javascript">
+        function changeUser() { 
+            document.getElementById("user").innerHTML = "user retrieved from DB";
+        }
+    </script>
 </head>
 
 <body>
@@ -53,12 +60,8 @@
                                 Contacto</a>
                         </li>
                         <li>
-                            <a href="login_users.html">
-                                Iniciar sesi&oacuten</a>
-                        </li>
-                        <li>
-                            <a id="s-up" href="signup.html">
-                                Crear cuenta</a>
+                            <a id="user" href="login_users.html">
+                                Username</a>
                         </li>
                         <li style="padding-left: 15px;">
                             <a id="cart" href="cart.html">
@@ -105,7 +108,7 @@
                     <div id="map-tile">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15083.225217929425!2d-98.1174052!3d19.072252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x909f0981e7568bca!2sVision_Net!5e0!3m2!1ses-419!2smx!4v1636326532300!5m2!1ses-419!2smx"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </a>
             </div>

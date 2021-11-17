@@ -420,6 +420,8 @@ p{
     height: 436px;
   }
 }
+
+
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
   .container .jumbotron {
