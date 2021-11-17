@@ -10,8 +10,6 @@
 
     <?php
     require("connection.php");  #siempre que se va a manipular info de la BD primero necesitamos hacer la conexion
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
-        
         $email=$_POST['email'];
         $password=$_POST['password'];
 
@@ -20,7 +18,6 @@
 
         header("Location: contact.html");
         mysqli_close($connection);
-    }
         
         # BUSQUEDA
 
