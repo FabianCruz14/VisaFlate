@@ -18,7 +18,7 @@
         $query = "SELECT username FROM user WHERE email='$email'";
         $res = mysqli_query($connection, $query) or die ("Query error");
 
-        header("location: contact.html");
+        header("Location: contact.html");
         mysqli_close($connection);
     }
         
