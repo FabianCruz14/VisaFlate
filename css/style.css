@@ -505,3 +505,50 @@ p{
     transform: translate3d(4px, 0, 0);
   }
 }
+
+#tabla_pedidos {
+  width: 100%;
+}
+
+#customers{
+  width: 90%;
+  margin-left: 5%;
+}
+
+#tabla_pedidos td {
+  border-top: 1px solid #BBB5B5;
+  padding: 15px;
+}
+
+#tabla_pedidos th{
+  padding-left: 15px;
+}
+
+#Nombre_cliente{
+  font-size: 75px;
+}
+
+#Datos_cliente{
+  padding-left: 10%;
+  padding-top: 1%;
+}
+
+#Regresar_btn{
+  background-color: #4F72FC;
+  color: white;
+  width: 125px;
+  height: 30px;
+  padding: 10px 55px;
+  border-color: black;
+}
+
+#contenedor_btn{
+  padding-top: 20%;
+  position: relative;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
