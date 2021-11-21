@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- para que las versiones del explorador usen la ultima version-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- para que funcione en la escala de any device-->
+    <title>VISION_NET</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="index.html" class="pull-left">
+                        <!-- visible-md visible-lg -->
+                        <div class="hidden-xs hidden-sm" id="logo-img"></div>
+                    </a>
+
+                    <div class="navbar-brand">
+                        <a href="index.html">
+                            <h1>VISION_NET</h1>
+                        </a>
+                    </div>
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li> 
+                            <a href="index.html" style="color: white;">
+                                CUENTA</a>
+                        </li>
+                        <li>
+                            <a href="products.html" style="color: white;">
+                                INVENTARIO</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" style="color: white;">
+                                VENTAS</a>
+                        </li>
+                        <li>
+                            <a href="login_users.html" style="color: white;">
+                                ADMINISTRADORES</a>
+                        </li>
+                        <li>
+                            <a href="signup.html" style="color: white;">
+                                CERRAR SESIÓN</a>
+                        </li>
+                    </ul><!-- #nav-list -->
+                </div><!-- .collapse .navbar-collapse -->
+            </div><!-- .container -->
+        </nav><!-- #header-nav -->
+    </header>
+    <div id="Datos_cliente">
+        <h1 id="Nombre_cliente">Rosa Torres</h1>
+        <h3 id="Telefono_cliente">Telefono: 1951130</h3>
+        <h3 id="Direccion_cliente">Direccion: 1001 Rosa Parks Estados Unidos</h3>
+        <h3 style="font-weight: bold; padding-bottom: 1%;">Pedidos</h3>
+    </div>
+    <div id="tabla_pedidos" style="padding-left: 5%;">
+        <table id="customers">
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Formato de Pago</th>
+                <th>Formato de Envio</th>
+                <th>Estatus de Envio </th>
+            </tr>
+            <tr>
+                <td>Tijeras</td>
+                <td>14</td>
+                <td>Deposito</td>
+                <td>Envio nacional</td>
+                <td>Esperando confirmación de deposito</td>
+                <td><a href="#"><img src="./images/edit.png" width="20px" height="20px"></a></td>
+            </tr>
+            <tr>
+                <td>Peluche</td>
+                <td>1</td>
+                <td>Efectivo</td>
+                <td>Punto de entrega: Plaza Loreto</td>
+                <td>En camino</td>
+                <td><a href="#"><img src="./images/edit.png" width="20px" height="20px"></a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="contenedor_btn">
+        <a id="Regresar_btn" href="ventas.html">Regresar</a>
+    </div>
+    
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
