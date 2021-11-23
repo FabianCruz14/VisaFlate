@@ -15,28 +15,11 @@
         $email=$_POST['email'];
         $password=$_POST['password'];
         
-        $query="INSERT INTO users values ('$username', '$email', '$password')";
+        $query="INSERT INTO usuarios values ('$username', '$email', '$password')";
         mysqli_query($connection, $query) or die("Registry error");
+        header("Location: index_in.html");
 
-        $query="SELECT * FROM users";
-
-        $res=mysqli_query($connection, $query) or die("Query error");
-
-        # forma de presentar resultados
-        $table="<table>
-        <tr><th>Username</th>
-        <th>Email</th>
-        <th>Password</th>
-        </tr>";
-
-        while($row=mysqli_fetch_assoc($res)) {
-            $table=$table."<tr><td>".$row['username']."</td><td>".$row['email']."</td><td>".$row['password']."</td></tr>";
-        }
-
-        $table=$table."</table>";
-        echo $table;
-
-        mysqli_close($connection);
+        mysqli_close($connection);  #cerramos conexion con la bd
     ?>
 </body>
 </html>
