@@ -552,3 +552,61 @@ p{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+
+/* Add new product and edit*/
+.formulario-editor{
+  background:#99bcf5 ;
+  padding: 80px;
+  margin:auto;
+  width: 700px;
+  margin-top: 3em;
+  border-radius: 5%;
+  outline: none;
+  margin-bottom: 3em;
+  
+}
+
+.contenedor-prod{
+  width: 100%;
+  padding: 1px;
+  outline: none;
+  margin-bottom: 2em;
+  text-align: center;
+  
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+select,textarea
+{
+    font-size: 20px;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+label{
+  color: #004aad;
+}
+
+input[type="submit"]{
+  width: 50%;
+  height: 20%;
+  background-color: #293fc9;
+  color: #dbe7fb;
+  outline: none;
+  border: none;
+}
+
+h1{
+  text-align: center;
+  color:#293fc9;
+  font-size: 40px;
+  margin-top:auto;
+  margin-bottom: 1em;
+}
