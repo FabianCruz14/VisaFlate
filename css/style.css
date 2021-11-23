@@ -320,6 +320,10 @@ hr{
   border: none;
 }
 
+.email-box input {
+  border: none;
+}
+
 .container-login{
   width: 100%;
   padding: 15px;
@@ -511,4 +515,109 @@ p{
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+
+#tabla_pedidos {
+  width: 100%;
+}
+
+#customers{
+  width: 90%;
+  margin-left: 5%;
+}
+
+#tabla_pedidos td {
+  border-top: 1px solid #BBB5B5;
+  padding: 15px;
+}
+
+#tabla_pedidos th{
+  padding-left: 15px;
+}
+
+#Nombre_cliente{
+  font-size: 75px;
+}
+
+#Datos_cliente{
+  padding-left: 10%;
+  padding-top: 1%;
+}
+
+#Regresar_btn{
+  background-color: #4F72FC;
+  color: white;
+  width: 125px;
+  height: 30px;
+  padding: 10px 55px;
+  border-color: black;
+}
+
+#contenedor_btn{
+  padding-top: 20%;
+  position: relative;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+/* Add new product and edit*/
+.formulario-editor{
+  background:#99bcf5 ;
+  padding: 80px;
+  margin:auto;
+  width: 700px;
+  margin-top: 3em;
+  border-radius: 5%;
+  outline: none;
+  margin-bottom: 3em;
+  
+}
+
+.contenedor-prod{
+  width: 100%;
+  padding: 1px;
+  outline: none;
+  margin-bottom: 2em;
+  text-align: center;
+  
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+select,textarea
+{
+    font-size: 20px;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+label{
+  color: #004aad;
+}
+
+input[type="submit"]{
+  width: 50%;
+  height: 20%;
+  background-color: #293fc9;
+  color: #dbe7fb;
+  outline: none;
+  border: none;
+}
+
+h1{
+  text-align: center;
+  color:#293fc9;
+  font-size: 40px;
+  margin-top:auto;
+  margin-bottom: 1em;
 }
