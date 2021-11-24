@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registro completo</h1>
+    
 
     <?php
         require("connection.php");  #siempre que se va a manipular info de la BD primero necesitamos hacer la conexion
@@ -15,15 +15,19 @@
         $nombre=$_POST['nombre'];
         $marca=$_POST['marca'];
         $description=$_POST['description'];
+        $category=$_POST['category'];
         $size=$_POST['size'];
         $color=$_POST['color'];
         $units=$_POST['units'];
         $price=$_POST['price'];
         $sale=$_POST['sale'];
         
-        $query="INSERT INTO productos (id, nombre, marca, descripcion, tamano, colores, unidades, precioC, precioV) values ('$ide', '$nombre', '$marca', '$description', '$size', '$color', '$unidades', '$price', '$sale')";
+        $query="INSERT INTO productos (id, nombre, marca, descripcion, categoria, tamano, colores, unidades, precioC, precioV) values ('$ide', '$nombre', '$marca', '$description', '$category', '$size', '$color', '$units', '$price', '$sale')";
         mysqli_query($connection, $query) or die("Registry error");
-        header("Location: ventas.html");
+        echo'<script type="text/javascript">
+            alert("Tarea Guardada");
+            window.location.href="add_products.html";
+        </script>';
 
         mysqli_close($connection);  #cerramos conexion con la bd
     ?>
