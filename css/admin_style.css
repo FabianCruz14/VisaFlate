@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-size: 16px;
+    background-color: #F8F6E2;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*Parte correspiendente CSS de la pagina Contacto */
+  
+  .div_ubicacion{
+  width: 600px;
+  margin: auto;
+  padding-bottom: 3%;
+  }
+  
+  .h1_ubi{
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 50px;
+  }
+  
+  .container_envios{
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 3%;
+  }
+  
+  .entrega{
+  width: 24%;
+  height: 500px;
+  background-color: #6561E0;
+  border-radius: 10%;
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 3%;
+  }
+  
+  .entrega p{
+  color: white;
+  font-size: 30px;
+  }
+  
+  .div_contacto{
+  height: 700px;
+  text-align: center;
+  }
+  
+  /*Aqui termina la parte CSS de la pagina Contacto */
+  
+  /******************************* CSS para el header *******************************/
+  #header-nav {
+    background-color: #004aad;
+    border-radius: 0;
+    border: 0;
+  }
+  
+  
+  #logo-img {
+    background: url('../images/logo.png') no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    margin: 10px 15px 10px 0px;
+  }
+  
+  #cart-img {
+  background: url('../images/cart.png') no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  }
+  
+  #cart {
+  padding: 0px;
+  text-align: center;
+  }
+  
+  .navbar-brand {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand h1 { 
+  color: #f5c405;
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000000;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0.75em;
+  }
+  
+  .navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+  }
+  
+  #nav-list a {
+  color: #f5c405;
+  text-align: center;
+  height: 40px;
+  line-height: 50%;
+  }
+  
+  #nav-list li {
+  height: 40px;
+  margin-top: 4.5%;
+  }
+  
+  .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #f5c405;
+  }
+  .navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -60px;
+  }
+  #s-up{  
+  background-color: dodgerblue;
+  border-radius: 20px;
+  }
+  
+  /* END HEADER */
+  
+  /* FOOTER */
+  .panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: gray;
+  border-top: 0;
+  }
+  .panel-footer div.row {
+  margin-bottom: 35px;
+  }
+  #hours, #address {
+  line-height: 2;
+  }
+  #hours > span, #address > span {
+  font-size: 1.3em;
+  }
+  #address p {
+  font-weight: bold;
+  
+  }
+  #commitment {
+  font-style: italic;
+  }
+  #commitment p:nth-child(2) {
+  margin-top: 25px;
+  }
+  /* END FOOTER */
+
+  /*add admin*/
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    select,textarea
+    {
+        font-size: 20px;
+        width: 90%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+    input[type="radio"]{
+        font-size: 20px;
+        width: 90%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        text-align: center;
+        color: #eff1fd;
+        text-emphasis-color: #eff1fd;
+    }
+
+    input[type="submit"]{
+    width: 40%;
+    height: 20%;
+    background-color: #eff1fd;
+    color: #293fc9;
+    outline: none;
+    border: none;
+    align-items: center;
+    
+    }
+
+    .formulario-admin{
+        background:#5e70e7 ;
+        padding: 80px;
+        margin:auto;
+        width: 700px;
+        margin-top: 3em;
+        border-radius: 0%;
+        outline: none;
+        margin-bottom: 3em;
+        
+      }
+      
+      .contenedor-admin{
+        width: 100%;
+        padding: 1px;
+        outline: none;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        border: none;
+        outline: none;
+        font-size: 20px;
+      }
+      
+      label{
+        color: #eff1fd;
+        text-align: left;
+        font-size: 22px;
+      }
+      
+      b{
+        text-align: center;
+        color:#eff1fd;
+        font-size: 40px;
+        margin-top:auto;
+        margin-bottom: 1em
+      }
+      
+      .title{
+        text-align: center;
+      } 
+
+
