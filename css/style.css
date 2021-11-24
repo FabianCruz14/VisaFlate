@@ -379,6 +379,17 @@ p{
   color: #293fc9;
 }
 
+.error {
+  background: #ffdb01;
+  color: #F51010;
+  height: 20px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* END LOGIN PAGE*/
 
 
@@ -536,19 +547,15 @@ p{
 #Regresar_btn{
   background-color: #4F72FC;
   color: white;
-  width: 125px;
-  height: 30px;
-  padding: 10px 55px;
-  border-color: black;
+  width: 145px;
+  height: 35px;
+  padding-top: 2px;
+  text-align: center;
+  border: 1px solid black;
 }
 
 #contenedor_btn{
-  padding-top: 20%;
-  position: relative;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  padding-top: 1%;
+  display:flex;
+  justify-content:center;
 }

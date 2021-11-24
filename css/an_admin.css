@@ -1,0 +1,904 @@
+*{
+   box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+}
+body {
+   font-size: 16px;
+   background-color: #F8F6E2;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/******************************* CSS para el header *******************************/
+#header-nav {
+   background-color: #004aad;
+   border-radius: 0;
+   border: 0;
+}
+
+
+#logo-img {
+   background: url('../images/logo.png') no-repeat;
+   background-size: contain;
+   width: 70px;
+   height: 70px;
+   margin: 10px 15px 10px 0px;
+}
+
+#cart-img {
+ background: url('../images/cart.png') no-repeat;
+ background-size: contain;
+ width: 40px;
+ height: 40px;
+}
+
+#cart {
+ padding: 0px;
+ text-align: center;
+}
+
+.navbar-brand {
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+ 
+.navbar-brand h1 { 
+ color: #f5c405;
+ font-size: 27px;
+ text-transform: uppercase;
+ font-weight: bold;
+ text-shadow: 1px 1px 1px #000000;
+ margin-top: 0;
+ margin-bottom: 0;
+ line-height: 0.75em;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+ text-decoration: none;
+}
+ 
+#nav-list a {
+ color: #f5c405;
+ text-align: center;
+ height: 40px;
+ line-height: 50%;
+}
+
+#nav-list li {
+ height: 40px;
+ margin-top: 4.5%;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+ border: 1px solid #f5c405;
+}
+.navbar-header button.navbar-toggle {
+ clear: both;
+ margin-top: -60px;
+}
+#s-up{  
+ background-color: dodgerblue;
+ border-radius: 20px;
+}
+
+/* END HEADER */
+
+
+
+
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+#wb_LayoutGrid1
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: #0000CD;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid1
+{
+   box-sizing: border-box;
+   padding: 35px 15px 5px 15px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1200px;
+}
+#LayoutGrid1 > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid1 > .row > .col-1, #LayoutGrid1 > .row > .col-2, #LayoutGrid1 > .row > .col-3
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid1 > .row > .col-1, #LayoutGrid1 > .row > .col-2, #LayoutGrid1 > .row > .col-3
+{
+   float: left;
+}
+#LayoutGrid1 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 33.33333333%;
+   text-align: center;
+}
+#LayoutGrid1 > .row > .col-1 > .col-1-padding
+{
+   box-sizing: border-box;
+   width: 100%;
+   padding: 0px 0px 0px 100px;
+}
+#LayoutGrid1 > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 41.66666667%;
+   text-align: left;
+}
+#LayoutGrid1 > .row > .col-2 > .col-2-padding
+{
+   box-sizing: border-box;
+   width: 100%;
+   padding: 0px 0px 20px 150px;
+}
+#LayoutGrid1 > .row > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid1:before,
+#LayoutGrid1:after,
+#LayoutGrid1 .row:before,
+#LayoutGrid1 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid1:after,
+#LayoutGrid1 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid1 > .row > .col-1, #LayoutGrid1 > .row > .col-2, #LayoutGrid1 > .row > .col-3
+{
+   float: none;
+   width: 100% !important;
+}
+}
+#wb_Heading1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   box-sizing: border-box;
+   vertical-align: top;
+   margin: 0;
+   padding: 0;
+   text-align: left;
+}
+#Heading1
+{
+   color: #FFD700;
+   font-family: Arial;
+   font-weight: bold;
+   font-style: normal;
+   font-size: 27px;
+   margin: 0;
+   text-align: left;
+}
+#MenuBar1
+{
+   background-color: transparent;
+   border: 1px solid #0000CD;
+}
+.MenuBar1SubMenu
+{
+   background-color: transparent;
+   border: 1px solid #0000CD;
+   position:	absolute;
+   visibility: hidden;
+   overflow: visible;
+   z-index: 100;
+}
+.MenuBar1SubMenuTable
+{
+   cursor: default;
+   border: 0;
+   padding: 0;
+}
+.MenuBar1SubMenuTable tr
+{
+   margin: 0;
+   padding: 0;
+}
+.MenuBar1Menu
+{
+   background-color: transparent;
+   margin: 0px 0 0px 0px;
+   padding: 0;
+}
+.MenuBar1MenuOuter
+{
+   background-color: transparent;
+   border: 0px solid #0000CD;
+}
+.MenuBar1Menu tr
+{
+   margin: 0;
+   padding: 0;
+}
+.MenuBar1MainItem .MenuBar1MainItemLeft,
+.MenuBar1MainItem .MenuBar1MainFolderLeft
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   text-align: center;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MainItem .MenuBar1MainItemText, 
+.MenuBar1MainItem .MenuBar1MainItemText a,
+.MenuBar1MainItem .MenuBar1MainFolderText,
+.MenuBar1MainItem .MenuBar1MainFolderText a
+{
+   background-color: #0000CD;
+   color: #FFD700;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 17px;
+   text-align: center;
+   text-decoration: none;
+   white-space: nowrap;
+   margin: 0;
+   cursor: pointer;
+   border-bottom: 0px solid #CCCCCC;
+   border-right: 0px solid #CCCCCC;
+   border-top: 0px solid #CCCCCC;
+   border-left: 0px solid #CCCCCC;
+   padding: 3px 5px 3px 5px;
+   vertical-align: middle;
+}
+.MenuBar1MainItem .MenuBar1MainItemRight,
+.MenuBar1MainItem .MenuBar1MainFolderRight
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MainItemHover .MenuBar1MainItemLeft,
+.MenuBar1MainItemActive .MenuBar1MainItemLeft,
+.MenuBar1MainItemHover .MenuBar1MainFolderLeft,
+.MenuBar1MainItemActive .MenuBar1MainFolderLeft
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MainItemHover .MenuBar1MainItemText,
+.MenuBar1MainItemActive .MenuBar1MainItemText,
+.MenuBar1MainItemHover .MenuBar1MainItemText a,
+.MenuBar1MainItemActive .MenuBar1MainItemText a,
+.MenuBar1MainItemHover .MenuBar1MainFolderText,
+.MenuBar1MainItemActive .MenuBar1MainFolderText,
+.MenuBar1MainItemHover .MenuBar1MainFolderText a,
+.MenuBar1MainItemActive .MenuBar1MainFolderText a
+{
+   background-color: #337AB7;
+   color: #FFD700;
+   font-size: 15px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 17px;
+   text-align: center;
+   text-decoration: none;
+   white-space: nowrap;
+   margin: 0;
+   cursor: pointer;
+   border-bottom: 0px solid #CCCCCC;
+   border-right: 0px solid #CCCCCC;
+   border-top: 0px solid #CCCCCC;
+   border-left: 0px solid #CCCCCC;
+   padding: 3px 5px 3px 5px;
+   vertical-align: middle;
+}
+.MenuBar1MainItemHover .MenuBar1MainItemRight,
+.MenuBar1MainItemActive .MenuBar1MainItemRight,
+.MenuBar1MainItemHover .MenuBar1MainFolderRight,
+.MenuBar1MainItemActive .MenuBar1MainFolderRight
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MenuItem .MenuBar1MenuItemLeft,
+.MenuBar1MenuItem .MenuBar1MenuFolderLeft
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   text-align: center;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MenuItem .MenuBar1MenuItemText, 
+.MenuBar1MenuItem .MenuBar1MenuItemText a,
+.MenuBar1MenuItem .MenuBar1MenuFolderText,
+.MenuBar1MenuItem .MenuBar1MenuFolderText a
+{
+   background-color: #FFFFFF;
+   color: #333333;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 16px;
+   text-align: left;
+   text-decoration: none;
+   white-space: nowrap;
+   margin: 0;
+   cursor: pointer;
+   border-bottom: 0px solid #CCCCCC;
+   border-top: 0px solid #CCCCCC;
+   border-right: 0px solid #CCCCCC;
+   border-left: 0px solid #CCCCCC;
+   padding: 3px 5px 3px 5px;
+   vertical-align: middle;
+}
+.MenuBar1MenuItem .MenuBar1MenuItemRight,
+.MenuBar1MenuItem .MenuBar1MenuFolderRight
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MenuItemHover .MenuBar1MenuItemLeft, 
+.MenuBar1MenuItemActive .MenuBar1MenuItemLeft,
+.MenuBar1MenuItemHover .MenuBar1MenuFolderLeft,
+.MenuBar1MenuItemActive .MenuBar1MenuFolderLeft
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1MenuItemHover .MenuBar1MenuItemText,
+.MenuBar1MenuItemActive .MenuBar1MenuItemText,
+.MenuBar1MenuItemHover .MenuBar1MenuItemText a,
+.MenuBar1MenuItemActive .MenuBar1MenuItemText a,
+.MenuBar1MenuItemHover .MenuBar1MenuFolderText,
+.MenuBar1MenuItemActive .MenuBar1MenuFolderText,
+.MenuBar1MenuItemHover .MenuBar1MenuFolderText a,
+.MenuBar1MenuItemActive .MenuBar1MenuFolderText a
+{
+   background-color: #337AB7;
+   color: #FFFFFF;
+   font-size: 13px;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 16px;
+   text-align: left;
+   text-decoration: none;
+   white-space: nowrap;
+   margin: 0;
+   cursor: pointer;
+   border-bottom: 0px solid #CCCCCC;
+   border-top: 0px solid #CCCCCC;
+   border-right: 0px solid #CCCCCC;
+   border-left: 0px solid #CCCCCC;
+   padding: 3px 5px 3px 5px;
+   vertical-align: middle;
+}
+.MenuBar1MenuItemHover .MenuBar1MenuItemRight,
+.MenuBar1MenuItemActive .MenuBar1MenuItemRight,
+.MenuBar1MenuItemHover .MenuBar1MenuFolderRight,
+.MenuBar1MenuItemActive .MenuBar1MenuFolderRight
+{
+   width: 0px;
+   cursor: pointer;
+   border-width: 0;
+   padding: 3px 0px 3px 0px;
+   font-size: 1px;
+}
+.MenuBar1SubMenu td,
+.MenuBar1Menu td,
+.MenuBar1Menu tr
+{
+   vertical-align: middle;
+}
+.MenuBar1MenuSplitText div
+{
+   height: 1px;
+   padding: 0;
+   background-color: #0000CD;
+   overflow: hidden;
+}
+.MenuBar1MenuItem .MenuBar1MenuSplitLeft
+{
+   height: 7px;
+   padding: 0;
+}
+.MenuBar1MenuItem .MenuBar1MenuSplitText
+{
+   background-color: #FFFFFF;
+   height: 7px;
+   padding: 0px 6px 0px 6px;
+}
+.MenuBar1MenuItem .MenuBar1MenuSplitRight
+{
+   height: 7px;
+   padding: 0;
+}
+.MenuBar1MainSplitText div
+{
+   background-color: #0000CD;
+   height: 1px;
+   padding: 0;
+   overflow: hidden;
+}
+.MenuBar1MainItem .MenuBar1MainSplitLeft 
+{
+   height: 7px;
+   padding: 0;
+}
+.MenuBar1MainItem .MenuBar1MainSplitText
+{
+   background-color: #0000CD;
+   height: 7px;
+   padding: 0;
+}
+.MenuBar1MainItem .MenuBar1MainSplitRight
+{
+   height: 7px;
+   padding: 0;
+}
+.MenuBar1MainItem
+{
+   vertical-align: middle;
+}
+.MenuBar1HorizontalSplit
+{
+   border-right: 0 solid #8080FF;
+   border-left: 0 solid #8080FF;
+   width: 15px;
+   background-color: #0000CD;
+   padding: 3px 0px 3px 0px;
+   vertical-align: middle;
+   text-align: center;
+   text-decoration: none;
+   color: #0000CD;
+   font-size: 15px;
+   font-family: Arial;
+   font-style: normal;
+}
+.MenuBar1MainItem, .MenuBar1MainItemHover, .MenuBar1MainItemActive,
+.MenuBar1MenuItem, .MenuBar1MenuItemHover, .MenuBar1MenuItemActive
+{
+   white-space: nowrap;
+}
+.MenuBar1SpacerDiv
+{
+   background: transparent;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 1px;
+}
+#wb_MenuBar1
+{
+   z-index: 1111 !important;
+}
+#Button1
+{
+   border: 0px dashed rgba(0,191,255,0.73);
+   border-radius: 20px;
+   background-color: rgba(0,191,255,0.73);
+   background-image: none;
+   color: #FFD700;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 15px;
+   padding: 1px 6px 1px 6px;
+   text-align: center;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#wb_LayoutGrid2
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: rgba(248,246,226,0.99);
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid2
+{
+   box-sizing: border-box;
+   padding: 50px 15px 10px 15px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1200px;
+}
+#LayoutGrid2 > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2
+{
+   float: left;
+}
+#LayoutGrid2 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 75%;
+   text-align: left;
+}
+#LayoutGrid2 > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 25%;
+   text-align: left;
+}
+#LayoutGrid2 > .row > .col-2 > .col-2-padding
+{
+   box-sizing: border-box;
+   width: 100%;
+   padding: 0px 0px 0px 5px;
+}
+#LayoutGrid2:before,
+#LayoutGrid2:after,
+#LayoutGrid2 .row:before,
+#LayoutGrid2 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid2:after,
+#LayoutGrid2 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2
+{
+   float: none;
+   width: 100% !important;
+}
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_Text1
+{
+   display: block;
+   margin: 0;
+   box-sizing: border-box;
+   width: 100%;
+}
+#Button2
+{
+   border: 2px solid #000080;
+   border-radius: 4px;
+   background-color: rgba(0,0,255,0.80);
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   padding: 1px 6px 1px 6px;
+   text-align: center;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#wb_LayoutGrid3
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: #F8F6E2;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid3
+{
+   box-sizing: border-box;
+   padding: 0px 15px 20px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid3 > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid3 > .row > .col-1, #LayoutGrid3 > .row > .col-2, #LayoutGrid3 > .row > .col-3
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid3 > .row > .col-1, #LayoutGrid3 > .row > .col-2, #LayoutGrid3 > .row > .col-3
+{
+   float: left;
+}
+#LayoutGrid3 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 16.66666667%;
+   text-align: left;
+}
+#LayoutGrid3 > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 66.66666667%;
+   text-align: left;
+}
+#LayoutGrid3 > .row > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 16.66666667%;
+   text-align: left;
+}
+#LayoutGrid3:before,
+#LayoutGrid3:after,
+#LayoutGrid3 .row:before,
+#LayoutGrid3 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid3:after,
+#LayoutGrid3 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid3 > .row > .col-1, #LayoutGrid3 > .row > .col-2, #LayoutGrid3 > .row > .col-3
+{
+   float: none;
+   width: 100% !important;
+}
+}
+#Table1
+{
+   border: 2px solid #C0C0C0;
+   border-radius: 0px;
+   background-color: transparent;
+   background-image: none;
+   border-collapse: separate;
+   border-spacing: 1px;
+   margin: 0;
+}
+#Table1 td
+{
+   padding: 0;
+}
+#Table1 td div
+{
+   white-space: nowrap;
+}
+#Table1 p, #Table1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#Table1 .cell0
+{
+   background-color: #5757FF;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: center;
+   vertical-align: middle;
+   color: #000000;
+   font-family: Arial;
+   font-size: 13px;
+   line-height: 16px;
+}
+#Table1 .cell1
+{
+   background-color: #5757FF;
+   background-image: none;
+   border: 1px #C0C0C0 solid;
+   text-align: center;
+   vertical-align: middle;
+   color: #F8F6E2;
+   font-family: Arial;
+   font-size: 13px;
+   line-height: 16px;
+}
+#Button3
+{
+   border: 2px solid #000080;
+   border-radius: 4px;
+   background-color: rgba(0,0,255,0.80);
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   padding: 1px 6px 1px 6px;
+   text-align: center;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#wb_LayoutGrid4
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: #F8F6E2;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid4
+{
+   box-sizing: border-box;
+   padding: 0px 15px 0px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid4 > .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#LayoutGrid4 > .row > .col-1
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid4 > .row > .col-1
+{
+   float: left;
+}
+#LayoutGrid4 > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   width: 100%;
+   text-align: center;
+}
+#LayoutGrid4:before,
+#LayoutGrid4:after,
+#LayoutGrid4 .row:before,
+#LayoutGrid4 .row:after
+{
+   display: table;
+   content: " ";
+}
+#LayoutGrid4:after,
+#LayoutGrid4 .row:after
+{
+   clear: both;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid4 > .row > .col-1
+{
+   float: none;
+   width: 100% !important;
+}
+}
