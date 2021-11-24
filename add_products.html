@@ -42,14 +42,14 @@
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
                             <a href="index.html">
-                                Inicio</a>
+                                Perfil</a>
                         </li>
                         <li>
                             <a href="products.html">
                                 Inventario</a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="ventas.html">
                                 Ventas</a>
                         </li>
                         <li>
@@ -60,11 +60,6 @@
                             <a id="s-up" href="signup.html" >
                                 Cerrar sesi&oacuten</a>
                         </li>
-                        <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.html">
-                                <div id="cart-img"></div>
-                            </a>
-                        </li>
                     </ul><!-- #nav-list -->
                 </div><!-- .collapse .navbar-collapse -->
             </div><!-- .container -->
@@ -72,115 +67,68 @@
     </header>
 
     <!-- action para poner el archivo php que procesara los datos -->
-    <form class="formulario-editor">
-
-        <form action="ejemplo.php" method="get" >
+    <form class="formulario-editor" action="add_products.php" method="post">
 
             <div class="title">
                 <b> Agregar un producto nuevo</b>
             </div>
 
             <div class="contenedor-prod">
+            <label for="product">ID del producto: </label>
+            <input type="number" placeholder="Agrega el ID del producto" name="ide">
+            </div>
+
+            <div class="contenedor-prod">
             <label for="product">Nombre del producto: </label>
-            <input type="text" placeholder="Agrega el nombre del producto" name="product" id="product" required>
+            <input type="text" placeholder="Agrega el nombre del producto" name="nombre">
             </div>
 
 
             <div class="contenedor-prod">
                 <label for="marca">Marca del producto: </label>
-                <input type="text" placeholder="Agrega la marca del producto" name="marca" id="marca" required >
+                <input type="text" placeholder="Agrega la marca del producto" name="marca">
             </div>
 
 
             <div class="contenedor-prod">
             <label for="description">Descripcion: </label>
-            <textarea name="description" rows="4" cols="40" placeholder="Escriba algo" id="description" required ></textarea>
+            <input type="text" placeholder="Escriba algo" name="description">
             </div>
 
-
-            <div class="contenedor-prod">
-            <label for="category">Categoria: </label>
-            <select name="category" required>
-                <option selected></option> 
-                <optgroup label="Papeleria">
-                  <option value="lapices">Lapices</option>
-                  <option value="papel">Papeles</option>
-                  <option value="sacapuntas">Sacapuntas</option>
-                  <option value="tijeras">Tijeras</option>
-                  <option value="reglas">Reglas y juegos de geometria </option>
-                  <option value="pegamento">Pegamentos</option>
-                  <option value="lapiceros">Lapiceros</option>
-                  <option value="plumones">Plumones</option>
-                  <option value="libretas">Libretas</option>
-                  <option value="pinturas">Pinturas</option>
-                  <option value="materialD">Material Didactico</option>
-                  <option value="equipoE">Equipo Electronico</option>
-                </optgroup>
-                <optgroup label="Merceria">
-                  <option value="hilos">Hilos</option>
-                  <option value="listones">Listones</option>
-                  <option value="estambres">Estambres</option>
-                  <option value="agujas">Agujas</option>
-                  <option value="chaquira">Chaquira</option>
-                  <option value="lentejuelas">Lentejuelas</option>
-                  <option value="brillantina">Brillantina</option>
-                  <option value="herraManualidades">Herramientas para Manualidades</option>
-                  <option value="formasUn">Formas de unicel</option>
-                  <option value="palosMad">Palos de madera</option>
-                  <option value="decoracion">Decoracion</option>
-                </optgroup>
-
-                <optgroup label="Regalos">
-                    <option value="juguetes">Juguetes</option>
-                    <option value="peluches">Peluches</option>
-                    <option value="bisuteria">Bisuteria</option>
-                    <option value="camisetas">Camisetas Personalizadas</option>
-                    <option value="dulces">Dulces</option>
-                    <option value="tazas">Tazas Personalizadas</option>
-                  </optgroup>
-              </select>
-            </div>
 
 
             <div class="contenedor-prod">
             <label for="size">Tamaño (opcional): </label>
-            <input type="text" placeholder="Agrega las opciones de tamaño" name="size" id="size" >
+            <input type="text" placeholder="Agrega las opciones de tamaño" name="size">
             </div>
 
 
             <div class="contenedor-prod">
             <label for="color">Colores disponibles (opcional): </label>
-            <input type="text" placeholder="Agrega los colores disponibles" name="color" id="color" >
+            <input type="text" placeholder="Agrega los colores disponibles" name="color">
             </div>
 
 
             <div class="contenedor-prod">
             <label for="units">Cantidad de unidades: </label>
-            <input type="number" placeholder="Agrega las unidades disponibles en bodega" name="units" id="units" min="1" required>
+            <input type="number" placeholder="Agrega las unidades disponibles en bodega" name="units">
             </div>
 
 
             <div class="contenedor-prod">
             <label for="price">Precio de compra: </label>
-            <input type="number" placeholder="Precio de compra" name="price" id="price" min="00" required>
+            <input type="number" placeholder="Precio de compra" name="price">
             </div>
 
             <div class="contenedor-prod">
             <label for="sale">Precio de venta: </label>
-            <input type="number" placeholder="Precio de venta al publico" name="sale" id="sale" min="00" required>
+            <input type="number" placeholder="Precio de venta al publico" name="sale">
             </div>
 
             <div class="contenedor-prod">
-            <label for="image-product">Agrega una imagen al producto:</label>
-            <input type="file" name="image-product" id="image-product" required>
+                <input type="submit" value="Guardar producto">
             </div>
 
-            <div class="contenedor-prod">
-                <input type="submit" name="save" value="Guardar producto" name="save" id="save"/>
-            </div>
-
-
-        </form>
     </form>
 
     <div class="footer">
