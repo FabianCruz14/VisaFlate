@@ -10,7 +10,7 @@
     <title>VISION_NET</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/6212ed9a55.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/product_style.css">
+    <link rel="stylesheet" href="css/admin_style.css">
 </head>
 
 <body>
@@ -72,114 +72,61 @@
     </header>
 
     <!-- action para poner el archivo php que procesara los datos -->
-    <form class="formulario-editor">
+    <form class="formulario-admin">
 
         <form action="ejemplo.php" method="get" >
 
             <div class="title">
-                <b> Editar producto</b>
+                <b>Añadir administrador</b>
             </div>
-           
-            <div class="contenedor-prod">
-                <label for="product">Nombre del producto: </label>
-                <input type="text" placeholder="Agrega el nombre del producto" name="product" id="product" required>
-            </div>
-
-
-            <div class="contenedor-prod">
-                <label for="marca">Marca del producto: </label>
-                <input type="text" placeholder="Agrega la marca del producto" name="marca" id="marca" >
+            
+            <div class="contenedor-admin">
+                <label for="image-profile">Agrega una foto de perfil:</label>
+                <input type="file" accept="image/*" name="img-profile" id="img-profile" required>
             </div>
 
-
-            <div class="contenedor-prod">
-                <label for="description">Descripcion: </label>
-                <textarea name="description" rows="4" cols="40" placeholder="Escriba algo" id="description" required ></textarea>
+            <div class="contenedor-admin">
+                <label for="name">Nombre:</label><br>
+                <input type="text" name="product"  placeholder="Agrega tu nombre" id="product" required>
             </div>
 
 
-            <div class="contenedor-prod">
-            <label for="category">Categoria: </label>
-            <select name="category">
-                <option selected></option> 
-                <optgroup label="Papeleria">
-                  <option value="lapices">Lapices</option>
-                  <option value="papel">Papeles</option>
-                  <option value="sacapuntas">Sacapuntas</option>
-                  <option value="tijeras">Tijeras</option>
-                  <option value="reglas">Reglas y juegos de geometria </option>
-                  <option value="pegamento">Pegamentos</option>
-                  <option value="lapiceros">Lapiceros</option>
-                  <option value="plumones">Plumones</option>
-                  <option value="libretas">Libretas</option>
-                  <option value="pinturas">Pinturas</option>
-                  <option value="materialD">Material Didactico</option>
-                  <option value="equipoE">Equipo Electronico</option>
-                </optgroup>
-                <optgroup label="Merceria">
-                  <option value="hilos">Hilos</option>
-                  <option value="listones">Listones</option>
-                  <option value="estambres">Estambres</option>
-                  <option value="agujas">Agujas</option>
-                  <option value="chaquira">Chaquira</option>
-                  <option value="lentejuelas">Lentejuelas</option>
-                  <option value="brillantina">Brillantina</option>
-                  <option value="herraManualidades">Herramientas para Manualidades</option>
-                  <option value="formasUn">Formas de unicel</option>
-                  <option value="palosMad">Palos de madera</option>
-                  <option value="decoracion">Decoracion</option>
-                </optgroup>
+            <div class="contenedor-admin">
+                <label for="email">Email:</label><br>
+                <input type="email"  name="email" placeholder="Agrega tu direccion de correo electronico" id="email" >
+            </div>
 
-                <optgroup label="Regalos">
-                    <option value="juguetes">Juguetes</option>
-                    <option value="peluches">Peluches</option>
-                    <option value="bisuteria">Bisuteria</option>
-                    <option value="camisetas">Camisetas Personalizadas</option>
-                    <option value="dulces">Dulces</option>
-                    <option value="tazas">Tazas Personalizadas</option>
-                  </optgroup>
+            <div class="contenedor-admin">
+                <label for="id">ID: </label><br>
+                <input type="text" name="id"  placeholder="Agrega tu ID, éste debe ser único" id="id" required>
+            </div>
+
+
+            <div class="contenedor-admin">
+            <label for="vigency">Vigencia:</label><br>
+            <select name="vigency">
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
               </select>
             </div>
 
-
-            <div class="contenedor-prod">
-            <label for="size">Tamaño (opcional): </label>
-            <input type="text" placeholder="Agrega las opciones de tamaño" name="size" id="size" >
+            <div class="contenedor-admin">
+                <label for="editprod">Permisos:</label>
+                <input type="radio" name="editprod" value="1" id="editprod">Edicion de Productos
+                <input type="radio" name="editadmin" value="2" >Edicion de Administradores
+                <input type="radio" name="read" value="3" >Lectura
             </div>
 
-
-            <div class="contenedor-prod">
-            <label for="color">Colores disponibles (opcional): </label>
-            <input type="text" placeholder="Agrega los colores disponibles" name="color" id="color" >
+            <div class="contenedor-admin">
+                <input type="submit" name="save" value="Guardar" name="save" id="save"/>
             </div>
 
-
-            <div class="contenedor-prod">
-            <label for="units">Cantidad de unidades: </label>
-            <input type="number" placeholder="Agrega las unidades disponibles en bodega" name="units" id="units" min="1" required>
-            </div>
-
-
-            <div class="contenedor-prod">
-            <label for="price">Precio de compra: </label>
-            <input type="number" placeholder="Precio de compra" name="price" id="price" min="00" required>
-            </div>
-
-            <div class="contenedor-prod">
-            <label for="sale">Precio de venta: </label>
-            <input type="number" placeholder="Precio de venta al publico" name="sale" id="sale" min="00" required>
-            </div>
-
-            <div class="contenedor-prod">
-            <label for="image-product">Agrega una imagen al producto:</label>
-            <input type="file" accept="image/*" name="image-product" required id="image-product">
-            </div>
-
-            <div class="contenedor-prod">
-                <input type="submit" name="save" value="Guardar cambios" name="save" id="save"/>
-            </div>
-
-            <div class="contenedor-prod">
+            <div class="contenedor-admin">
                 <input type="submit" name="cancel" value="Cancelar" name="cancel" id="cancel"/>
             </div>
 

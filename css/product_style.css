@@ -159,6 +159,10 @@ margin-top: 25px;
 }
 /* END FOOTER */
 
+
+/* Add new product and edit*/ 
+
+
 input[type="text"],
 input[type="password"],
 input[type="number"],
@@ -182,7 +186,7 @@ input[type="submit"]{
   outline: none;
   border: none;
 }
-/* Add new product and edit*/
+
 .formulario-editor{
   background:#99bcf5 ;
   padding: 80px;
@@ -223,13 +227,4 @@ b{
 
 .title{
   text-align: center;
-}
-
-
-
-
-
-
-
-
-  
+} 
