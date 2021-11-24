@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <title>an_admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-<link href="pagina1.css" rel="stylesheet">
-<link href="an_admin.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="css/an_admin.css" rel="stylesheet">
 <script src="jscookmenu.min.js"></script>
 <script>
 var cmMenuBar1 =
@@ -65,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function(event)
               <div id="collapsable-nav" class="collapse navbar-collapse">
                   <ul id="nav-list" class="nav navbar-nav navbar-right">
                       <li>
-                          <a href="cuenta.html">
+                          <a href="#">
                               Cuenta</a> <!--cuenta -->
                       </li>
                       <li>
-                          <a href="inventario.html">
+                          <a href="#">
                               Inventario</a>
                       </li>
                       <li>
@@ -77,17 +76,12 @@ document.addEventListener('DOMContentLoaded', function(event)
                               Ventas</a>
                       </li>
                       <li>
-                          <a href="administradores.html">
+                          <a href="an_admin.html">
                               Administradores</a>
                       </li>
                       <li>
-                          <a id="s-up" href="signup.html" >
+                          <a id="s-up" href="index.html">
                               Cerrar Sesion</a>
-                      </li>
-                      <li style="padding-left: 15px;">
-                          <a id="cart" href="cart.html">
-                              <div id="cart-img"></div>
-                          </a>
                       </li>
                   </ul><!-- #nav-list -->
               </div><!-- .collapse .navbar-collapse -->
@@ -106,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(event)
 </div>
 <div class="col-2">
 <div class="col-2-padding">
-<input type="submit" id="Button2" name="Ana_admin" value="AÑADIR ADMINISTRADOR" style="display:inline-block;width:180px;height:43px;z-index:4;">
+    <a href="add_admin.html" id="s-up" style="display:inline-block;width:180px;height:43px;z-index:4;background: #004aad">Anadir administrador</a>
 </div>
 </div>
 </div>
@@ -190,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function(event)
 <div id="LayoutGrid4">
 <div class="row">
 <div class="col-1">
-<input type="submit" id="Button3" name="return" value="REGRESAR" style="display:inline-block;width:196px;height:36px;z-index:6;">
+<a href="vista_user.html" id="s-up" style=";display:inline-block;width:180px;height:43px;z-index:4;background: #004aad">Anadir administrador</a>
 </div>
 </div>
 </div>

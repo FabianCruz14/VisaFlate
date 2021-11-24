@@ -668,17 +668,14 @@ input:focus, textarea:focus, select:focus
 }
 #Image1
 {
-   border: 0px solid #000000;
    border-radius: 0px;
    box-sizing: border-box;
    padding: 0;
    display: block;
-   width: 100%;
-   height: auto;
-   max-width: 450px;
+   width: 300px;
+   height: 300px;
    margin-left: auto;
    margin-right: auto;
-   vertical-align: top;
 }
 #wb_Text2 
 {

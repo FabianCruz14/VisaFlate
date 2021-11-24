@@ -42,28 +42,23 @@
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
                             <a href="index.html">
-                                Inicio</a>
+                                CUENTA</a>
                         </li>
                         <li>
                             <a href="products.html">
-                                Productos</a>
+                                INVENTARIO</a>
                         </li>
                         <li>
-                            <a href="contact.html">
-                                Contacto</a>
+                            <a href="ventas.html">
+                                VENTAS</a>
                         </li>
                         <li>
-                            <a href="login_users.html">
-                                Iniciar sesi&oacuten</a>
+                            <a href="an_admin.html">
+                                ADMINISTRADORES</a>
                         </li>
                         <li>
-                            <a id="s-up" href="signup.html" >
-                                Crear cuenta</a>
-                        </li>
-                        <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.html">
-                                <div id="cart-img"></div>
-                            </a>
+                            <a id="s-up" href="index.html" >
+                                Cerrar sesi&oacuten</a>
                         </li>
                     </ul><!-- #nav-list -->
                 </div><!-- .collapse .navbar-collapse -->
@@ -72,9 +67,7 @@
     </header>
 
     <!-- action para poner el archivo php que procesara los datos -->
-    <form class="formulario-admin">
-
-        <form action="ejemplo.php" method="get" >
+    <form class="formulario-admin" action="add_admin.php" method="post">
 
             <div class="title">
                 <b>Añadir administrador</b>
@@ -82,14 +75,18 @@
             
             <div class="contenedor-admin">
                 <label for="image-profile">Agrega una foto de perfil:</label>
-                <input type="file" accept="image/*" name="img-profile" id="img-profile" required>
+                <input type="file" accept="image/*" name="img-profile" id="img-profile">
+            </div>
+
+             <div class="contenedor-admin">
+                <label for="id">ID: </label><br>
+                <input type="text" name="ide"  placeholder="Agrega tu ID, éste debe ser único" id="id" required>
             </div>
 
             <div class="contenedor-admin">
                 <label for="name">Nombre:</label><br>
-                <input type="text" name="product"  placeholder="Agrega tu nombre" id="product" required>
+                <input type="text" name="nombre"  placeholder="Agrega tu nombre" id="product" required>
             </div>
-
 
             <div class="contenedor-admin">
                 <label for="email">Email:</label><br>
@@ -97,40 +94,20 @@
             </div>
 
             <div class="contenedor-admin">
-                <label for="id">ID: </label><br>
-                <input type="text" name="id"  placeholder="Agrega tu ID, éste debe ser único" id="id" required>
-            </div>
-
-
-            <div class="contenedor-admin">
-            <label for="vigency">Vigencia:</label><br>
-            <select name="vigency">
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
-              </select>
-            </div>
-
-            <div class="contenedor-admin">
                 <label for="editprod">Permisos:</label>
-                <input type="radio" name="editprod" value="1" id="editprod">Edicion de Productos
+                <input type="radio" name="editprod" value="1">Edicion de Productos
                 <input type="radio" name="editadmin" value="2" >Edicion de Administradores
                 <input type="radio" name="read" value="3" >Lectura
             </div>
 
             <div class="contenedor-admin">
-                <input type="submit" name="save" value="Guardar" name="save" id="save"/>
+                <input type="submit" name="save" value="Guardar">
             </div>
 
-            <div class="contenedor-admin">
-                <input type="submit" name="cancel" value="Cancelar" name="cancel" id="cancel"/>
+            <div class="contenedor-admin" style="background:#F8F6E2;">
+                <a id="Regresar_btn" href="vista_user.html">Regresar</a>
             </div>
 
-        </form>
     </form>
 
     <div class="footer">

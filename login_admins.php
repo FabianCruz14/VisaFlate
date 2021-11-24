@@ -32,7 +32,7 @@
         if(mysqli_num_rows($res) === 1){
             $row = mysqli_fetch_assoc($res);
             #print_r $row['username'];  #falta recuperar el username
-            header("Location: index_in.html"); #bienvenida del admin !!!!!!!!!!!!
+            header("Location: vista_user.html"); #bienvenida del admin !!!!!!!!!!!!
             exit();
         }
         else{
