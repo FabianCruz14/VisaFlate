@@ -559,3 +559,87 @@ p{
   display:flex;
   justify-content:center;
 }
+
+.search_container{
+  float: left;
+}
+
+#barra_busqueda{
+  padding: 6px;
+  margin-top: 1.2%;
+  margin-left: 3%;
+  font-size: 17px;
+  border-radius: 20px;
+  background-color: #D1E5FD;
+  width: 40%;
+  height: 50%;
+  margin-right: 10%;
+}
+
+
+
+#barra_busqueda, select{
+  padding: 10px 20px;
+  display: inline-block;
+  outline: none;
+}
+
+
+form a{
+  color: #f5c405;
+  font-size: 20px;
+  padding-left: 3%;
+}
+
+form a:hover{
+  color: #f5c405;
+  font-size: 20px;
+  padding-left: 3%;
+}
+
+.Productos{
+  margin: auto;
+}
+.products_texto{
+  display: flex;
+  width: 100%;
+  padding-left: 20%;
+}
+
+.products_texto h2{
+  padding-right: 55%;
+}
+
+.products_list{
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.producto_container{
+  display: flex;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #93A0E2;
+  border-radius: 15px;
+}
+
+.producto_container h4{
+  margin-right: 22%;
+  top: 50%;
+  transform: translate(0%, 40%);
+  width: 39%;
+}
+
+.producto_container h3{
+  transform: translate(0%, 30%);
+  font-weight: bold;
+}
+
+.img_list{
+  width: 240px;
+  height: 90px;
+  object-fit: cover;
+  margin: 10px; 
+  margin-right: 3%;
+}
