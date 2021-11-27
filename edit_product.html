@@ -57,7 +57,7 @@
                                 Iniciar sesi&oacuten</a>
                         </li>
                         <li>
-                            <a id="s-up" href="signup.html" >
+                            <a id="s-up" href="signup.html">
                                 Crear cuenta</a>
                         </li>
                         <li style="padding-left: 15px;">
@@ -74,12 +74,12 @@
     <!-- action para poner el archivo php que procesara los datos -->
     <form class="formulario-editor">
 
-        <form action="ejemplo.php" method="get" >
+        <form action="ejemplo.php" method="get">
 
             <div class="title">
                 <b> Editar producto</b>
             </div>
-           
+
             <div class="contenedor-prod">
                 <label for="product">Nombre del producto: </label>
                 <input type="text" placeholder="Agrega el nombre del producto" name="product" id="product" required>
@@ -88,99 +88,101 @@
 
             <div class="contenedor-prod">
                 <label for="marca">Marca del producto: </label>
-                <input type="text" placeholder="Agrega la marca del producto" name="marca" id="marca" >
+                <input type="text" placeholder="Agrega la marca del producto" name="marca" id="marca">
             </div>
 
 
             <div class="contenedor-prod">
                 <label for="description">Descripcion: </label>
-                <textarea name="description" rows="4" cols="40" placeholder="Escriba algo" id="description" required ></textarea>
+                <textarea name="description" rows="4" cols="40" placeholder="Escriba algo" id="description"
+                    required></textarea>
             </div>
 
 
             <div class="contenedor-prod">
-            <label for="category">Categoria: </label>
-            <select name="category">
-                <option selected></option> 
-                <optgroup label="Papeleria">
-                  <option value="lapices">Lapices</option>
-                  <option value="papel">Papeles</option>
-                  <option value="sacapuntas">Sacapuntas</option>
-                  <option value="tijeras">Tijeras</option>
-                  <option value="reglas">Reglas y juegos de geometria </option>
-                  <option value="pegamento">Pegamentos</option>
-                  <option value="lapiceros">Lapiceros</option>
-                  <option value="plumones">Plumones</option>
-                  <option value="libretas">Libretas</option>
-                  <option value="pinturas">Pinturas</option>
-                  <option value="materialD">Material Didactico</option>
-                  <option value="equipoE">Equipo Electronico</option>
-                </optgroup>
-                <optgroup label="Merceria">
-                  <option value="hilos">Hilos</option>
-                  <option value="listones">Listones</option>
-                  <option value="estambres">Estambres</option>
-                  <option value="agujas">Agujas</option>
-                  <option value="chaquira">Chaquira</option>
-                  <option value="lentejuelas">Lentejuelas</option>
-                  <option value="brillantina">Brillantina</option>
-                  <option value="herraManualidades">Herramientas para Manualidades</option>
-                  <option value="formasUn">Formas de unicel</option>
-                  <option value="palosMad">Palos de madera</option>
-                  <option value="decoracion">Decoracion</option>
-                </optgroup>
+                <label for="category">Categoria: </label>
+                <select name="category">
+                    <option selected></option>
+                    <optgroup label="Papeleria">
+                        <option value="lapices">Lapices</option>
+                        <option value="papel">Papeles</option>
+                        <option value="sacapuntas">Sacapuntas</option>
+                        <option value="tijeras">Tijeras</option>
+                        <option value="reglas">Reglas y juegos de geometria </option>
+                        <option value="pegamento">Pegamentos</option>
+                        <option value="lapiceros">Lapiceros</option>
+                        <option value="plumones">Plumones</option>
+                        <option value="libretas">Libretas</option>
+                        <option value="pinturas">Pinturas</option>
+                        <option value="materialD">Material Didactico</option>
+                        <option value="equipoE">Equipo Electronico</option>
+                    </optgroup>
+                    <optgroup label="Merceria">
+                        <option value="hilos">Hilos</option>
+                        <option value="listones">Listones</option>
+                        <option value="estambres">Estambres</option>
+                        <option value="agujas">Agujas</option>
+                        <option value="chaquira">Chaquira</option>
+                        <option value="lentejuelas">Lentejuelas</option>
+                        <option value="brillantina">Brillantina</option>
+                        <option value="herraManualidades">Herramientas para Manualidades</option>
+                        <option value="formasUn">Formas de unicel</option>
+                        <option value="palosMad">Palos de madera</option>
+                        <option value="decoracion">Decoracion</option>
+                    </optgroup>
 
-                <optgroup label="Regalos">
-                    <option value="juguetes">Juguetes</option>
-                    <option value="peluches">Peluches</option>
-                    <option value="bisuteria">Bisuteria</option>
-                    <option value="camisetas">Camisetas Personalizadas</option>
-                    <option value="dulces">Dulces</option>
-                    <option value="tazas">Tazas Personalizadas</option>
-                  </optgroup>
-              </select>
+                    <optgroup label="Regalos">
+                        <option value="juguetes">Juguetes</option>
+                        <option value="peluches">Peluches</option>
+                        <option value="bisuteria">Bisuteria</option>
+                        <option value="camisetas">Camisetas Personalizadas</option>
+                        <option value="dulces">Dulces</option>
+                        <option value="tazas">Tazas Personalizadas</option>
+                    </optgroup>
+                </select>
             </div>
 
 
             <div class="contenedor-prod">
-            <label for="size">Tamaño (opcional): </label>
-            <input type="text" placeholder="Agrega las opciones de tamaño" name="size" id="size" >
+                <label for="size">Tamaño (opcional): </label>
+                <input type="text" placeholder="Agrega las opciones de tamaño" name="size" id="size">
             </div>
 
 
             <div class="contenedor-prod">
-            <label for="color">Colores disponibles (opcional): </label>
-            <input type="text" placeholder="Agrega los colores disponibles" name="color" id="color" >
+                <label for="color">Colores disponibles (opcional): </label>
+                <input type="text" placeholder="Agrega los colores disponibles" name="color" id="color">
             </div>
 
 
             <div class="contenedor-prod">
-            <label for="units">Cantidad de unidades: </label>
-            <input type="number" placeholder="Agrega las unidades disponibles en bodega" name="units" id="units" min="1" required>
+                <label for="units">Cantidad de unidades: </label>
+                <input type="number" placeholder="Agrega las unidades disponibles en bodega" name="units" id="units"
+                    min="1" required>
             </div>
 
 
             <div class="contenedor-prod">
-            <label for="price">Precio de compra: </label>
-            <input type="number" placeholder="Precio de compra" name="price" id="price" min="00" required>
+                <label for="price">Precio de compra: </label>
+                <input type="number" placeholder="Precio de compra" name="price" id="price" min="00" required>
             </div>
 
             <div class="contenedor-prod">
-            <label for="sale">Precio de venta: </label>
-            <input type="number" placeholder="Precio de venta al publico" name="sale" id="sale" min="00" required>
+                <label for="sale">Precio de venta: </label>
+                <input type="number" placeholder="Precio de venta al publico" name="sale" id="sale" min="00" required>
             </div>
 
             <div class="contenedor-prod">
-            <label for="image-product">Agrega una imagen al producto:</label>
-            <input type="file" accept="image/*" name="image-product" required id="image-product">
+                <label for="image-product">Agrega una imagen al producto:</label>
+                <input type="file" accept="image/*" name="image-product" required id="image-product">
             </div>
 
             <div class="contenedor-prod">
-                <input type="submit" name="save" value="Guardar cambios" name="save" id="save"/>
+                <input type="submit" name="save" value="Guardar cambios" name="save" id="save" />
             </div>
 
             <div class="contenedor-prod">
-                <input type="submit" name="cancel" value="Cancelar" name="cancel" id="cancel"/>
+                <input type="submit" name="cancel" value="Cancelar" name="cancel" id="cancel" />
             </div>
 
         </form>
@@ -188,38 +190,41 @@
 
     <div class="footer">
         <section class="footers bg-light pt-5 pb-3">
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
-                    <div class="footers-logo" style="padding-top: 30px;">
-                        <h2 style="color: #3164F4; font-weight: bold; font-size: 25px;">Vision_Net</h2>
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
+                        <div class="footers-logo" style="padding-top: 30px;">
+                            <h2 style="color: #3164F4; font-weight: bold; font-size: 25px;">Vision_Net</h2>
+                        </div>
+                        <div class="footers-info mt-3">
+                            <p>2021 &copy; Copyright</p>
+                        </div>
                     </div>
-                    <div class="footers-info mt-3">
-                        <p>2021 &copy; Copyright</p>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-two"
+                        style="padding-top: 30px; padding-bottom: 30px;">
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" style="color: #030303;">Inicio</a></li>
+                            <li><a href="products.html" style="color: #030303;">Cátalogo</a></li>
+                            <li><a href="contact.html" style="color: #030303;">Ubicación</a></li>
+                            <li><a href="contact.html" style="color: #030303;">Contacto</a></li>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-2 footers-two" style="padding-top: 30px; padding-bottom: 30px;">
-                    <ul class="list-unstyled">
-                    <li><a href="index.html" style="color: #030303;">Inicio</a></li>
-                    <li><a href="products.html" style="color: #030303;">Cátalogo</a></li>
-                    <li><a href="contact.html" style="color: #030303;">Ubicación</a></li>
-                    <li><a href="contact.html" style="color: #030303;">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-2 footers-three" style="padding-top: 30px; padding-bottom: 30px;">
-                    <ul class="list-unstyled">
-                    <li><a href="https://www.facebook.com/ " style="color: #030303;">Facebook</a></li>
-                    <li><a href="instagram.com" style="color: #030303;">Instagram</a></li>
-                    <li><a href="https://twitter.com/" style="color: #030303;">Twitter</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-2 footers-five" style="padding-top: 30px; padding-bottom: 30px;">
-                    <ul class="list-unstyled">
-                    <li><a href="maintenance.html" style="color: #030303;">Politica de privacidad</a></li>
-                    <li><a href="about.html" style="color: #030303;">Metodos de pago</a></li>
-                    </ul>
-                </div>    
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-three"
+                        style="padding-top: 30px; padding-bottom: 30px;">
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.facebook.com/ " style="color: #030303;">Facebook</a></li>
+                            <li><a href="instagram.com" style="color: #030303;">Instagram</a></li>
+                            <li><a href="https://twitter.com/" style="color: #030303;">Twitter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-five"
+                        style="padding-top: 30px; padding-bottom: 30px;">
+                        <ul class="list-unstyled">
+                            <li><a href="maintenance.html" style="color: #030303;">Politica de privacidad</a></li>
+                            <li><a href="about.html" style="color: #030303;">Metodos de pago</a></li>
+                        </ul>
+                    </div>
 
+                </div>
             </div>
-        </div>
 </body>
