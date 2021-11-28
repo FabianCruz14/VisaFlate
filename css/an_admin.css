@@ -591,7 +591,6 @@ input:focus, textarea:focus, select:focus
 #LayoutGrid2 > .row > .col-1, #LayoutGrid2 > .row > .col-2
 {
    box-sizing: border-box;
-   font-size: 0px;
    min-height: 1px;
    padding-right: 15px;
    padding-left: 15px;
@@ -631,7 +630,7 @@ input:focus, textarea:focus, select:focus
 #LayoutGrid2 .row:after
 {
    display: table;
-   content: " ";
+  /* content: " ";*/
 }
 #LayoutGrid2:after,
 #LayoutGrid2 .row:after
@@ -862,7 +861,6 @@ input:focus, textarea:focus, select:focus
 #LayoutGrid4 > .row > .col-1
 {
    box-sizing: border-box;
-   font-size: 0px;
    min-height: 1px;
    padding-right: 15px;
    padding-left: 15px;
