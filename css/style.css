@@ -221,17 +221,26 @@ body {
 /* END HOME PAGE*/
 
 /* PRODUCTS PAGE*/
+
+.todos-los-productos{
+  text-align: center;
+}
+
 .heading-categorias{
-  padding-left: 430px;
-  font-weight: 550;
+  /*padding-left: 430px;*/
+  position: relative;
+  font-weight: 700;
 }
 
 .product-container{ 
-  padding: 0 15vw;/*Padding para centrarlo en la pagina*/
+ /* padding: 0 15vw;Padding para centrarlo en la pagina*/
   padding-top: 25px;
-  padding-left: 400px;
-  padding-bottom: 15px;
+  /*padding-left: 400px;*/
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  
   overflow-x: auto;
 }
 
@@ -597,6 +606,7 @@ form a:hover{
   padding-left: 3%;
 }
 
+
 .Productos{
   margin: auto;
 }
@@ -639,10 +649,17 @@ form a:hover{
 
 .img_list{
   width: 240px;
-  height: 90px;
+  height: 100px;
   object-fit: cover;
   margin: 10px; 
   margin-right: 3%;
+}
+
+.img_carrito_productos{
+  width: 340px;
+  height: 100px;
+  object-fit: cover;
+  transform: rotate(-1deg);
 }
 
 .inventario_container{
@@ -678,12 +695,19 @@ form a:hover{
 
 }
 
+#titulo_de_tabla{
+  background-color: #3445d6;
+  text-align: center;
+}
+
 #tabla_inv{
   table-layout: fixed;
   width: 80%;
   background-color: #5E70E7;
   text-align: center;
 }
+
+
 
 #tabla_inv tr, td, th{
   border: 4px solid #ddd;
@@ -697,6 +721,7 @@ form a:hover{
   height: 80%;
   width: 80%;
 }
+
 .incrementos{
   background: transparent;
   border: transparent;
@@ -730,4 +755,100 @@ form a:hover{
   border: 1px solid black;
   margin-left: 5%;
   font-weight: bold;
+}
+
+/*CARRITO DE COMPRAS*/
+
+.th_c{
+color: #000;
+border: none;
+}
+
+.th_2{
+  text-align: left;
+  padding: 5px;
+  color: #ffffff;
+  background: #004aad;
+  font-weight: 600;
+  border: none;
+}
+
+.productos-tabla{
+  width: 70%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cart-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cantidad_input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+.imagen_carrito{
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+
+}
+
+.precio_total{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.precio_total{
+  border-top: 3px solid #f5c405;
+  width: 70%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lasttd{
+  text-align: right;
+}
+
+.envio{
+  width: 70%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.th_3{
+  text-align: left;
+  padding: 5px;
+  color: #ffffff;
+  background: #739ff1;
+  font-weight: 600;
+  border:none;
+}
+.tablatr{
+  border: none;
+}
+#direccion{
+  width: auto;
+}
+.pagar_boton{
+  border: none;
+  color: white;
+  background-color: #3770bb;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 0;
+  position: relative;
+}
+
+.titulo_carrito{
+  text-align: center;
+  color: #004aad;
+  font-weight: 700;
 }

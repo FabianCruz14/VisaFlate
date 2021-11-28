@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
     <!-- para que funcione en la escala de any device-->
     <title>VISION_NET</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/6212ed9a55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                                 Iniciar sesi&oacuten</a>
                         </li>
                         <li>
-                            <a id="s-up" href="signup.html">
+                            <a id="s-up" href="signup.html" >
                                 Crear cuenta</a>
                         </li>
                         <li style="padding-left: 15px;">
@@ -70,48 +70,38 @@
             </div><!-- .container -->
         </nav><!-- #header-nav -->
     </header>
+    <div class="inventario_container">
+        <h1 style="color: #1115ee; font-weight: bold;">BISUTERIA</h1>
+        <div class="busqueda_container">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
+        </div>
+      
+        <table id="tabla_inv">
 
-    <div id="main_content" class="container">
-        <div class="jumbotron"></div>
+            <tr id="titulo_de_tabla">
+                <td>FOTOGRAFIA</td>
+                <td>PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>EN EXISTENCIA</td>
+                <td>AÑADIR AL CARRITO</td>
+            </tr>
 
-        <h2 id="meet-us">Conoce nuestra amplia variedad de productos</h2>
-        <div id="home-tiles" class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a
-                    href="products.html#papeleria">
-                    <div id="papeleria-tile">
-                        <span>papeleria</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a
-                    href="products.html#merceria">
-                    <div id="merceria-tile">
-                        <span>merceria</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a
-                    href="products.html#regalos">
-                    <div id="regalos-tile">
-                        <span>regalos</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-12 col-sm-6 col-xs-12">
-                <a href="https://goo.gl/maps/BEWZqYcAE3xPd4ot6" target="_blank">
-                    <div id="map-tile">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15083.225217929425!2d-98.1174052!3d19.072252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x909f0981e7568bca!2sVision_Net!5e0!3m2!1ses-419!2smx!4v1636326532300!5m2!1ses-419!2smx"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </a>
-            </div>
-        </div><!-- End of #home-tiles -->
-    </div><!-- End of #main_content-->
-
+            <tr id= "tabla_de_productos">
+                <td><img class="img_table" src="images/r_bisuteria.jpg"></td>
+                <td>Pulceras de oro laminado</td>
+                <td style="font-size: 30px;">$200</td>
+                <td style="font-size: 30px;">7</td>
+           
+                    <td>
+                        <a href="cart.html">
+                            <img class="img_table" src="images/Untitled-Artwork.png">
+                        </a>
+                    </td>
+                
+            </tr>
+        </table>  
+    </div>
     <footer class="panel-footer">
         <div class="container">
             <div class="row">
@@ -135,10 +125,4 @@
         </div>
     </footer>
 
-    <!-- jQuery (Bootstrap JS plugins depend on it) -->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
 </body>
-
-</html>
