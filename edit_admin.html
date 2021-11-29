@@ -72,9 +72,7 @@
     </header>
 
     <!-- action para poner el archivo php que procesara los datos -->
-    <form class="formulario-admin">
-
-        <form action="ejemplo.php" method="get">
+    <form class="formulario-admin" action="edit_admin.php" method="post">
 
             <div class="title">
                 <b>Editar administrador</b>
@@ -82,23 +80,23 @@
 
             <div class="contenedor-admin">
                 <label for="image-profile">Cambiar foto de perfil:</label>
-                <input type="file" accept="image/*" name="img-profile" id="img-profile" required>
+                <input type="file" accept="image/*" name="img-profile">
             </div>
 
             <div class="contenedor-admin">
                 <label for="name">Nombre:</label><br>
-                <input type="text" name="product" placeholder="Agrega tu nombre" id="product" required>
+                <input type="text" name="nombre" placeholder="Agrega tu nombre" required>
             </div>
 
 
             <div class="contenedor-admin">
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" placeholder="Agrega tu direccion de correo electronico" id="email">
+                <input type="email" name="email" placeholder="Agrega tu direccion de correo electronico" required>
             </div>
 
             <div class="contenedor-admin">
-                <label for="id">ID: </label><br>
-                <input type="text" name="id" placeholder="Agrega tu ID, éste debe ser único" id="id" required>
+                <label for="pass">Contrasena: </label><br>
+                <input type="text" name="pass" placeholder="Agrega tu contrasena" required>
             </div>
 
 
@@ -117,20 +115,18 @@
 
             <div class="contenedor-admin">
                 <label for="editprod">Permisos:</label>
-                <input type="radio" name="editprod" value="1" id="editprod">Edicion de Productos
-                <input type="radio" name="editadmin" value="2">Edicion de Administradores
-                <input type="radio" name="read" value="3">Lectura
+                <input type="radio" name="editprod" value="1">Edicion de Productos
+                <input type="radio" name="editadmin" value="1">Edicion de Administradores
+                <input type="radio" name="read" value="1">Lectura
             </div>
 
             <div class="contenedor-admin">
-                <input type="submit" name="save" value="Actualizar" name="save" id="save" />
+                <input type="submit" name="save" value="Actualizar" name="save">
             </div>
 
-            <div class="contenedor-admin">
-                <input type="submit" name="regresar" value="Regresar" id="cancel" />
+            <div class="contenedor-admin" style="text-align:center;">
+                <a id="btn_inv" href="vista_user.html">Regresar</a>
             </div>
-
-        </form>
     </form>
 
     <div class="footer">

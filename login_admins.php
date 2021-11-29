@@ -13,6 +13,7 @@
 
 <?php
     if(isset($_POST['submit'])){
+       # session_start();
         require("connection.php");  #siempre que se va a manipular info de la BD primero necesitamos hacer la conexion
             
          function validate($data){
@@ -32,14 +33,17 @@
         if(mysqli_num_rows($res) === 1){
             $row = mysqli_fetch_assoc($res);
             #print_r $row['username'];  #falta recuperar el username
+            mysqli_close($connection);
+           # $_SESSION['newsession']=$id;
             header("Location: vista_user.html"); #bienvenida del admin !!!!!!!!!!!!
             exit();
         }
         else{
+            mysqli_close($connection);
             header("Location: login_admins.php?error=Correo o contraseña incorrecta");
             exit();
         }
-        mysqli_close($connection);
+        
     }          
 ?>
     <header>
