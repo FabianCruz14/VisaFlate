@@ -41,24 +41,24 @@
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#" style="color: white;">
+                            <a href="vista_user.html">
                                 CUENTA</a>
                         </li>
                         <li>
-                            <a href="inventario.html" style="color: white;">
+                            <a href="inventario.html">
                                 INVENTARIO</a>
                         </li>
                         <li>
-                            <a href="ventas.html" style="color: white;">
+                            <a href="ventas.html">
                                 VENTAS</a>
                         </li>
                         <li>
-                            <a href="an_admin.html" style="color: white;">
+                            <a href="an_admin.html">
                                 ADMINISTRADORES</a>
                         </li>
                         <li>
-                            <a href="index.html" style="color: white;">
-                                CERRAR SESIÓN</a>
+                            <a id="s-up" href="index.html">
+                                Cerrar sesi&oacuten</a>
                         </li>
                     </ul><!-- #nav-list -->
                 </div><!-- .collapse .navbar-collapse -->
@@ -67,11 +67,11 @@
     </header>
 
     <h1 style="margin-left: 5%;">Pedidos</h1>
-    <h3 style="margin-left: 5%;">Pedidos</h3>
 
-    <div id="tabla_pedidos">
-        <table id="customers">
-            <tr>
+
+    <div class="inventario_container">
+        <table  id="tabla_inv">
+            <tr  id="titulo_de_tabla">
                 <th>Cliente</th>
                 <th>Producto</th>
                 <th>Fecha</th>
@@ -79,7 +79,8 @@
                 <th>Formato de Envio</th>
                 <th>Estatus de Envio </th>
             </tr>
-            <tr>
+            <div class="productos_categoria">
+            <tr id= "tabla_de_productos">
                 <td>Rosa Torres</td>
                 <td>Tijeras</td>
                 <td>06/10/2021</td>
@@ -88,7 +89,7 @@
                 <td>Esperando confirmación de deposito <a href="venta_cliente.html"><a href="venta_cliente.html"><img
                                 src="./images/edit.png" width="20px" height="20px"></a></a></td>
             </tr>
-            <tr>
+            <tr id= "tabla_de_productos">
                 <td>Rosa Torres</td>
                 <td>Tijeras</td>
                 <td>06/10/2021</td>
@@ -97,7 +98,7 @@
                 <td>Esperando confirmación de deposito <a href="venta_cliente.html"><img src="./images/edit.png"
                             width="20px" height="20px"></a></td>
             </tr>
-            <tr>
+            <tr id= "tabla_de_productos">
                 <td>Rosa Torres</td>
                 <td>Tijeras</td>
                 <td>06/10/2021</td>
@@ -106,7 +107,7 @@
                 <td>Esperando confirmación de deposito <a href="venta_cliente.html"><img src="./images/edit.png"
                             width="20px" height="20px"></a></td>
             </tr>
-            <tr>
+            <tr id= "tabla_de_productos">
                 <td>Rosa Torres</td>
                 <td>Tijeras</td>
                 <td>06/10/2021</td>
@@ -115,6 +116,7 @@
                 <td>Esperando confirmación de deposito <a href="venta_cliente.html"><img src="./images/edit.png"
                             width="20px" height="20px"></a></td>
             </tr>
+        </div>
         </table>
     </div>
 

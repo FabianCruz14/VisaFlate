@@ -74,38 +74,44 @@
                 <th class="th_2">Cantidad</th>
                 <th class="th_2">Subtotal</th>
             </tr>
-            <tr class="tablatr">
-                <td class="th_c">
-                    <div class="cart-info">
-                        <img class="imagen_carrito" src="images/brillantina.jpg">
-                        <div>
-                            <p class="th_c"> Brillantina de colores</p>
-                            <small class="th_c">Precio:$50.00</small>
-                            <br>
-                            <a href=""><small>Eliminar</small></a>
-                        </div>
-                    </div>
-                </td>
-                <td class="cantidad_input th_c"><input type="number" value="1"></td>
-                <td class="th_c">$50.00</td>
-            </tr>
-            <tr class="tablatr">
-                <td class="th_c">
-                    <div class="cart-info">
-                        <img class="imagen_carrito" src="images/r_peluches.jpg">
-                        <div>
-                            <p class="th_c"> Brillantina de colores</p>
-                            <small class="th_c">Precio:$50.00</small>
-                            <br>
-                            <a href=""><small>Eliminar</small></a>
-                        </div>
-                    </div>
-                </td>
-                <td class="cantidad_input th_c"><input type="number" value="1"></td>
-                <td class="th_c">$50.00</td>
-            </tr>
+            <div class="cart-items">
+                <div class= "cart-row">
+                    <tr class="tablatr">
+                        <td class="th_c">
+                            <div class="cart-info">
+                                <img class="imagen_carrito" src="images/brillantina.jpg">
+                                <div>
+                                    <p class="th_c nombre_producto cart-item-title"> Brill</p>
+                                    <small class="th_c">Precio:$50.00</small>
+                                    <br>
+                                    <button class="btEliminar"><small>Eliminar</small></button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cart-quantity-input th_c"><input type="number" value="1"></td>
+                        <td class="th_c cart-price">$50.00</td>
+                    </tr>
+                </div>
+                <div class= "cart-row">
+                    <tr class="tablatr">
+                        <td class="th_c">
+                            <div class="cart-info">
+                                <img class="imagen_carrito" src="images/lentejuela.jpg">
+                                <div>
+                                    <p class="th_c nombre_producto cart-item-title"> Brillantina de colores</p>
+                                    <small class="th_c">Precio:$50.00</small>
+                                    <br>
+                                    <button class="btEliminar"><small>Eliminar</small></button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="cart-quantity-input th_c"><input type="number" value="1"></td>
+                        <td class="th_c cart-price">$50.00</td>
+                    </tr>
+                </div>
+            </div>
         </table>
-
+            
         <table class="envio">
             <tr class="tablatr">
                 <th class="th_3">Modo de Envio</th>
@@ -136,6 +142,7 @@
                         <input type="text" id="direccion" name="direccion"> 
                     </div>
                 </td>
+                
                 <td class="th_c">
                     <div class="modo_de_envio">
                         <input type="radio" id="deposito" name="pagos" value="deposito">
@@ -164,7 +171,7 @@
                     <td class="th_c">$200.00</td>
                 </tr>
                 <tr>
-                    <td class="th_c">Total</td>
+                    <td class="cart-total-price th_c">Total</td>
                     <td class="th_c">$200.00</td>
                 </tr>
             </table>
@@ -202,7 +209,7 @@
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" async></script>
 </body>
   
 </html>
