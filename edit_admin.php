@@ -11,22 +11,21 @@
 
     <?php
         require("connection.php");  #siempre que se va a manipular info de la BD primero necesitamos hacer la conexion
-        $ide=$_POST['ide'];
-        $nombre=$_POST['nombre'];
-        $marca=$_POST['marca'];
-        $description=$_POST['description'];
-        $category=$_POST['category'];
-        $size=$_POST['size'];
-        $color=$_POST['color'];
-        $units=$_POST['units'];
-        $price=$_POST['price'];
-        $sale=$_POST['sale'];
         
-        $query="INSERT INTO $category values ('$ide', '$nombre', '$marca', '$description', '$size', '$color', '$units', '$price', '$sale')";
+        $nombre=$_POST['nombre'];
+        $email=$_POST['email'];
+        $pass=$_POST['pass'];
+        $vigency=$_POST['vigency'];
+        $editprod=$_POST['editprod'];
+        $editadmin=$_POST['editadmin'];
+        $read=$_POST['read'];                   # nameA, vigencia, email, pass, eprod, eadmin,lectura
+        
+        
+        $query="UPDATE administradores SET nameA = '$nombre', vigencia = '$vigency', email = '$email', pass = '$pass', eprod = '$editprod', eadmin = '$editadmin', lectura = '$read' WHERE nameA = '$nombre'";
         mysqli_query($connection, $query) or die("Registry error");
         echo'<script type="text/javascript">
-            alert("Producto registrado");
-            window.location.href="add_products.html";
+            alert("Cambios guardados");
+            window.location.href="vista_user.html";
         </script>';
 
         mysqli_close($connection);  #cerramos conexion con la bd

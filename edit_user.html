@@ -10,7 +10,7 @@
     <title>VISION_NET</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/6212ed9a55.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/product_style.css">
+    <link rel="stylesheet" href="css/admin_style.css">
 </head>
 
 <body>
@@ -42,23 +42,28 @@
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
                             <a href="index.html">
-                                Perfil</a>
+                                Inicio</a>
                         </li>
                         <li>
                             <a href="products.html">
-                                Inventario</a>
+                                Productos</a>
                         </li>
                         <li>
-                            <a href="ventas.html">
-                                Ventas</a>
+                            <a href="contact.html">
+                                Contacto</a>
                         </li>
                         <li>
                             <a href="login_users.html">
-                                Administradores</a>
+                                Iniciar sesi&oacuten</a>
                         </li>
                         <li>
                             <a id="s-up" href="signup.html">
-                                Cerrar sesi&oacuten</a>
+                                Crear cuenta</a>
+                        </li>
+                        <li style="padding-left: 15px;">
+                            <a id="cart" href="cart.html">
+                                <div id="cart-img"></div>
+                            </a>
                         </li>
                     </ul><!-- #nav-list -->
                 </div><!-- .collapse .navbar-collapse -->
@@ -67,95 +72,40 @@
     </header>
 
     <!-- action para poner el archivo php que procesara los datos -->
-    <form class="formulario-editor" action="add_products.php" method="post">
+    <form class="formulario-admin" action="edit_user.php" method="post">
 
-        <div class="title">
-            <b> Agregar un producto nuevo</b>
-        </div>
+            <div class="title">
+                <b>Editar usuario</b>
+            </div>
 
-        <div class="contenedor-prod">
-            <label for="product">ID del producto: </label>
-            <input type="number" placeholder="Agrega el ID del producto" name="ide">
-        </div>
+            <div class="contenedor-admin">
+                <label for="image-profile">Cambiar foto de perfil:</label>
+                <input type="file" accept="image/*" name="img-profile">
+            </div>
 
-        <div class="contenedor-prod">
-            <label for="product">Nombre del producto: </label>
-            <input type="text" placeholder="Agrega el nombre del producto" name="nombre">
-        </div>
-
-
-        <div class="contenedor-prod">
-            <label for="marca">Marca del producto: </label>
-            <input type="text" placeholder="Agrega la marca del producto" name="marca">
-        </div>
+            <div class="contenedor-admin">
+                <label for="name">Nombre:</label><br>
+                <input type="text" name="nombre" placeholder="Agrega tu nombre" required>
+            </div>
 
 
-        <div class="contenedor-prod">
-            <label for="description">Descripcion: </label>
-            <input type="text" name="description" placeholder="Escriba algo">
-        </div>
+            <div class="contenedor-admin">
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" placeholder="Agrega tu direccion de correo electronico" required>
+            </div>
 
+            <div class="contenedor-admin">
+                <label for="pass">Contrasena: </label><br>
+                <input type="password" name="pass" placeholder="Agrega tu contrasena" required>
+            </div>
 
-        <div class="contenedor-prod">
-            <label for="category">Categoria: </label>
-            <select name="category">
-                <option selected></option>
-                <optgroup label="Papeleria">
-                    <option value="lapices">Lapices</option>
-                    <option value="papeles">Papeles</option>
-                    <option value="tijeras">Tijeras</option>
-                    <option value="pegamentos">Pegamentos</option>
-                    <option value="lapiceros">Lapiceros</option>
-                    <option value="plumones">Plumones</option>
-                </optgroup>
-                <optgroup label="Merceria">
-                    <option value="hilos">Hilos</option>
-                    <option value="listones">Listones</option>
-                    <option value="herramientas">Herramientas</option>
-                </optgroup>
+            <div class="contenedor-admin">
+                <input type="submit" name="save" value="Actualizar" name="save">
+            </div>
 
-                <optgroup label="Regalos">
-                    <option value="juguetes">Juguetes</option>
-                    <option value="bisuteria">Bisuteria</option>
-                    <option value="dulces">Dulces</option>
-                </optgroup>
-            </select>
-        </div>
-
-        <div class="contenedor-prod">
-            <label for="size">Tamaño (opcional): </label>
-            <input type="text" placeholder="Agrega las opciones de tamaño" name="size">
-        </div>
-
-
-        <div class="contenedor-prod">
-            <label for="color">Colores disponibles (opcional): </label>
-            <input type="text" placeholder="Agrega los colores disponibles" name="color">
-        </div>
-
-
-        <div class="contenedor-prod">
-            <label for="units">Cantidad de unidades: </label>
-            <input type="number" placeholder="Agrega las unidades disponibles en bodega" name="units">
-        </div>
-
-
-        <div class="contenedor-prod">
-            <label for="price">Precio de compra: </label>
-            <input type="number" placeholder="Precio de compra" name="price">
-        </div>
-
-        <div class="contenedor-prod">
-            <label for="sale">Precio de venta: </label>
-            <input type="number" placeholder="Precio de venta al publico" name="sale">
-        </div>
-
-        <div class="contenedor-prod">
-            <input type="submit" value="Guardar producto">
-        </div>
-        <div class="contendor-prod" style="text-align:center;">
-            <a id="btn_inv" href="inventario.html">Regresar</a>
-        </div>
+            <div class="contenedor-admin" style="text-align:center;">
+                <a id="btn_inv" href="vista_user.html">Regresar</a>
+            </div>
     </form>
 
     <div class="footer">

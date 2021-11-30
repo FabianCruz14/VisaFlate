@@ -535,6 +535,18 @@ p{
   margin-left: 5%;
 }
 
+#customers td {
+  border-bottom: 1px solid #BBB5B5;
+  padding: 8px;
+  color: #000;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
 #tabla_pedidos td {
   border-top: 1px solid #BBB5B5;
   padding: 15px;
@@ -709,7 +721,7 @@ form a:hover{
 
 
 
-#tabla_inv tr, td, th{
+#tabla_inv tr, #tabla_inv td, #tabla_inv th{
   border: 4px solid #ddd;
   padding: 8px;
   color: white;
