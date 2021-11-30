@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+    
+
     <header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
@@ -71,36 +74,37 @@
         </nav><!-- #header-nav -->
     </header>
     <div class="inventario_container">
-        <h1 style="color: #1115ee; font-weight: bold;">LISTONES</h1>
+        <h1 style="color: #1115ee; font-weight: bold;">LAPICES</h1>
         <div class="busqueda_container">
             <i class="fa fa-search"></i>
             <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
         </div>
-      
-        <table id="tabla_inv">
+        
+        
+        <?php
+            require("connection.php");
 
-            <tr id="titulo_de_tabla">
-                <td>FOTOGRAFIA</td>
-                <td>PRODUCTO</td>
-                <td>PRECIO</td>
-                <td>EN EXISTENCIA</td>
-                <td>AÑADIR AL CARRITO</td>
-            </tr>
+            $query="SELECT * FROM lapices";
+            $result=mysqli_query($connection, $query) or die ("Search error");
 
-            <tr id= "tabla_de_productos">
-                <td><img class="img_table" src="images/listones.jpg"></td>
-                <td>Liston de Tela Rojo</td>
-                <td style="font-size: 30px;">$70</td>
-                <td style="font-size: 30px;">30 </td>
-           
-                    <td>
-                        <a href="cart.html">
-                            <img class="img_table" src="images/Untitled-Artwork.png">
-                        </a>
-                    </td>
-                
-            </tr>
-        </table>  
+            $lapices="<table id=\"tabla_inv\">
+            <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
+            <td>PRODUCTO</td>
+            <td>PRECIO</td>
+            <td>EN EXISTENCIA</td>
+            <td>AÑADIR AL CARRITO</td>
+            </tr>";
+
+            while($fila=mysqli_fetch_assoc($result)){
+                $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>".$fila['']."</td><td>".$fila['nombre']." ".$fila['marca']."<br>".$fila['descripcion']."</td><td style=\"font-size: 30px;\">"."$".$fila['pVenta']."</td><td style=\"font-size: 30px;\">".$fila['unidades']."</td><td><a href=\"cart.html\"><img class=\"img_table\" src=\"images/Untitled-Artwork.png\"></a></td></tr>";
+            }
+
+            $lapices=$lapices."</table>";
+
+            echo $lapices;
+            mysqli_close($connection);
+        ?>
+
     </div>
     
     <footer class="panel-footer">

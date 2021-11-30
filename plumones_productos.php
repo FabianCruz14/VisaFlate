@@ -71,38 +71,36 @@
         </nav><!-- #header-nav -->
     </header>
     <div class="inventario_container">
-        <h1 style="color: #1115ee; font-weight: bold;">HERRAMIENTAS PARA MANUALIDADES</h1>
+        <h1 name="plumones" style="color: #1115ee; font-weight: bold;">PLUMONES Y MARCATEXTOS</h1>
         <div class="busqueda_container">
             <i class="fa fa-search"></i>
             <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
         </div>
       
-        <table id="tabla_inv">
+        <?php
+            require("connection.php");
 
-            <tr id="titulo_de_tabla">
-                <td>FOTOGRAFIA</td>
-                <td>PRODUCTO</td>
-                <td>PRECIO</td>
-                <td>EN EXISTENCIA</td>
-                <td>AÑADIR AL CARRITO</td>
-            </tr>
+            $query="SELECT * FROM plumones";
+            $result=mysqli_query($connection, $query) or die ("Search error");
 
-            <tr id= "tabla_de_productos">
-                <td><img class="img_table" src="images/palitos.jpg"></td>
-                <td>Palitos de Madera</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td style="font-size: 30px;">200</td>
-           
-                    <td>
-                        <a href="cart.html">
-                            <img class="img_table" src="images/Untitled-Artwork.png">
-                        </a>
-                    </td>
-                
-            </tr>
-        </table>    
+            $lapices="<table id=\"tabla_inv\">
+            <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
+            <td>PRODUCTO</td>
+            <td>PRECIO</td>
+            <td>EN EXISTENCIA</td>
+            <td>AÑADIR AL CARRITO</td>
+            </tr>";
+
+            while($fila=mysqli_fetch_assoc($result)){
+                $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>".$fila['']."</td><td>".$fila['nombre']." ".$fila['marca']."<br>".$fila['descripcion']."</td><td style=\"font-size: 30px;\">"."$".$fila['pVenta']."</td><td style=\"font-size: 30px;\">".$fila['unidades']."</td><td><a href=\"cart.html\"><img class=\"img_table\" src=\"images/Untitled-Artwork.png\"></a></td></tr>";
+            }
+
+            $lapices=$lapices."</table>";
+
+            echo $lapices;
+            mysqli_close($connection);
+        ?>  
     </div>
-    
     <footer class="panel-footer">
         <div class="container">
             <div class="row">
@@ -125,8 +123,8 @@
             <div class="text-center" style="color: #f5c405;">&copy; Copyright VISION_NET 2021</div>
         </div>
     </footer>
-    <!-- jQuery (Bootstrap JS plugins depend on it) -->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+<!-- jQuery (Bootstrap JS plugins depend on it) -->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 </body>
