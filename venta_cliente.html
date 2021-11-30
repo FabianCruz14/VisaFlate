@@ -40,25 +40,30 @@
 
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
-                        <li> 
-                            <a href="index.html" style="color: white;">
-                                CUENTA</a>
+                        <li>
+                            <a href="index_in.html">
+                                Inicio</a>
                         </li>
                         <li>
-                            <a href="products.html" style="color: white;">
-                                INVENTARIO</a>
+                            <a href="products_in.html">
+                                Productos</a>
                         </li>
                         <li>
-                            <a href="contact.html" style="color: white;">
-                                VENTAS</a>
+                            <a href="contact_in.html">
+                                Contacto</a>
                         </li>
                         <li>
-                            <a href="login_users.html" style="color: white;">
-                                ADMINISTRADORES</a>
+                            <a href="#">
+                                Username</a>
                         </li>
                         <li>
-                            <a href="signup.html" style="color: white;">
-                                CERRAR SESIÓN</a>
+                            <a id="s-up" href="index.html">
+                                Cerrar Sesion</a>
+                        </li>
+                        <li style="padding-left: 15px;">
+                            <a id="cart" href="cart_in.html">
+                                <div id="cart-img"></div>
+                            </a>
                         </li>
                     </ul><!-- #nav-list -->
                 </div><!-- .collapse .navbar-collapse -->
@@ -71,36 +76,37 @@
         <h3 id="Direccion_cliente">Direccion: 1001 Rosa Parks Estados Unidos</h3>
         <h3 style="font-weight: bold; padding-bottom: 1%;">Pedidos</h3>
     </div>
-    <div id="tabla_pedidos" style="padding-left: 5%;">
-        <table id="customers">
-            <tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Formato de Pago</th>
-                <th>Formato de Envio</th>
-                <th>Estatus de Envio </th>
-            </tr>
-            <tr>
-                <td>Tijeras</td>
-                <td>14</td>
-                <td>Deposito</td>
-                <td>Envio nacional</td>
-                <td>Esperando confirmación de deposito</td>
-                <td><a href="#"><img src="./images/edit.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>Peluche</td>
-                <td>1</td>
-                <td>Efectivo</td>
-                <td>Punto de entrega: Plaza Loreto</td>
-                <td>En camino</td>
-                <td><a href="#"><img src="./images/edit.png" width="20px" height="20px"></a></td>
-            </tr>
+
+    <div class="inventario_container">
+        <table id="tabla_inv">
+                <tr id="titulo_de_tabla">
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Formato de Pago</th>
+                    <th>Formato de Envio</th>
+                    <th>Estatus de Envio </th>
+                </tr>
+            <div class="productos_categoria">
+                <tr id= "tabla_de_productos">
+                    <td>Tijeras</td>
+                    <td>14</td>
+                    <td>Deposito</td>
+                    <td>Envio nacional</td>
+                    <td>Esperando confirmación de deposito</td>
+                </tr>
+                <tr id= "tabla_de_productos">
+                    <td>Peluche</td>
+                    <td>1</td>
+                    <td>Efectivo</td>
+                    <td>Punto de entrega: Plaza Loreto</td>
+                    <td>En camino</td>
+                </tr>
+            </div>
         </table>
     </div>
 
     <div id="contenedor_btn">
-        <a id="Regresar_btn" href="ventas.html">Regresar</a>
+        <a id="Regresar_btn" href="index_in.html">Regresar</a>
     </div>
     
     <!-- jQuery (Bootstrap JS plugins depend on it) -->

@@ -73,6 +73,7 @@
             </div><!-- .container -->
         </nav><!-- #header-nav -->
     </header>
+
     <div class="inventario_container">
         <h1 style="color: #1115ee; font-weight: bold;">LAPICES</h1>
         <div class="busqueda_container">
@@ -84,6 +85,7 @@
         <?php
             require("connection.php");
 
+<<<<<<< HEAD:lapices_productos.php
             $query="SELECT * FROM lapices";
             $result=mysqli_query($connection, $query) or die ("Search error");
 
@@ -105,6 +107,39 @@
             mysqli_close($connection);
         ?>
 
+=======
+            <tr id="titulo_de_tabla">
+                <td>FOTOGRAFIA</td>
+                <td>PRODUCTO</td>
+                <td>MARCA</td>
+                <td>PRECIO</td>
+                <td>EN EXISTENCIA</td>
+                <td>AÑADIR AL CARRITO</td>
+            </tr>
+            <div class="productos_categoria">
+            <tr id= "tabla_de_productos">
+                <td><img class="img_table shop-item-image" src="images/lapices_de_color.jpg"></td>
+                <td class="shop-item-title">Lapices de Color</td>
+                <td>Mapita</td>
+                <td style="font-size: 30px;" class="shop-item-price">$16</td>
+                <td style="font-size: 30px;">5</td>
+                    <td>
+                            <button class="shop-item-button" type="button">AGREGAR A CARRITO</button>
+                    </td>
+            </tr>
+            <tr id= "tabla_de_productos">
+                <td><img class="img_table shop-item-image" src="images/lapices-para-dibujo.jpg"></td>
+                <td class="shop-item-title">Lapices de grafito</td>
+                <td>Mapita</td>
+                <td style="font-size: 30px;" class="shop-item-price">$18</td>
+                <td style="font-size: 30px;">5</td>
+                    <td>
+                            <button class="shop-item-button" type="button">AGREGAR A CARRITO</button>
+                    </td>
+            </tr>
+        </div>
+        </table> 
+>>>>>>> 485d970e552683752bf1e21c499cf623ef108ba7:lapices_productos.html
     </div>
     
     <footer class="panel-footer">

@@ -83,6 +83,7 @@
             $query="SELECT * FROM pegamentos";
             $result=mysqli_query($connection, $query) or die ("Search error");
 
+<<<<<<< HEAD:pegamentos_productos.php
             $lapices="<table id=\"tabla_inv\">
             <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
             <td>PRODUCTO</td>
@@ -100,6 +101,22 @@
             echo $lapices;
             mysqli_close($connection);
         ?>
+=======
+            <tr id= "tabla_de_productos">
+                <td><img class="img_table" src="images/pegamentos.jpg"></td>
+                <td>Pegamento en barra Marca: Prit</td>
+                <td style="font-size: 30px;">$7.50</td>
+                <td style="font-size: 30px;">50</td>
+           
+                    <td>
+                        <a href="cart.html">
+                            <img class="img_table add_to_cart" src="images/Untitled-Artwork.png">
+                        </a>
+                    </td>
+                
+            </tr>
+        </table> 
+>>>>>>> 485d970e552683752bf1e21c499cf623ef108ba7:pegamentos_productos.html
     </div>
     <footer class="panel-footer">
         <div class="container">

@@ -800,7 +800,7 @@ border: none;
 .cantidad_input{
   width: 40px;
   height: 30px;
-  padding: 5px;
+  text-align: center;
 }
 
 .imagen_carrito{
@@ -864,3 +864,10 @@ border: none;
   color: #004aad;
   font-weight: 700;
 }
+.shop-item-button{
+  color: rgb(36, 14, 156);
+  background-color: #f5f108;
+  font-size: 16px;
+  margin: 0;
+}
+

@@ -83,6 +83,7 @@
             $query="SELECT * FROM plumones";
             $result=mysqli_query($connection, $query) or die ("Search error");
 
+<<<<<<< HEAD:plumones_productos.php
             $lapices="<table id=\"tabla_inv\">
             <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
             <td>PRODUCTO</td>
@@ -100,6 +101,22 @@
             echo $lapices;
             mysqli_close($connection);
         ?>  
+=======
+            <tr id= "tabla_de_productos">
+                <td><img class="img_table add_to_cart" src="images/plumones.jpg"></td>
+                <td>Plumones de Colores  Marca:Kawaii</td>
+                <td style="font-size: 30px;">$65</td>
+                <td style="font-size: 30px;">3 </td>
+           
+                    <td>
+                        <a href="cart.html">
+                            <img class="img_table" src="images/Untitled-Artwork.png">
+                        </a>
+                    </td>
+                
+            </tr>
+        </table>   
+>>>>>>> 485d970e552683752bf1e21c499cf623ef108ba7:plumones_productos.html
     </div>
     <footer class="panel-footer">
         <div class="container">
