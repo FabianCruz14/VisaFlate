@@ -117,7 +117,7 @@
                             <ul class="navbar">
                                 <li><a href="inventario.html"><img src="images/img0001_over.png"
                                             class="hover"><span><img src="images/img0001.png"></span></a></li>
-                                <li><a href="ventas.html"><img src="images/img0002_over.png" class="hover"><span><img
+                                <li><a href="ventas.php"><img src="images/img0002_over.png" class="hover"><span><img
                                                 src="images/img0002.png"></span></a></li>
                                 <li><a href="an_admin.html"><img src="images/img0003_over.png" class="hover"><span><img
                                                 src="images/img0003.png"></span></a></li>

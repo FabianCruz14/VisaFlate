@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
     <!-- para que funcione en la escala de any device-->
     <title>VISION_NET</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/6212ed9a55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 </head>
 
 <body>
@@ -65,47 +65,49 @@
             </div><!-- .container -->
         </nav><!-- #header-nav -->
     </header>
-    <div class="inventario_container">
-        <h1 style="color: #1107FF; font-weight: bold;">INVENTARIO</h1>
-        <div class="busqueda_container">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
-            <a href="add_products.html" style="width: 250px; height: 40px; padding-top: 10px; margin-top: 4px;" id="Regresar_btn">Añadir
-                producto</a>
-        </div>
-        <table id="tabla_inv">
-            <tr>
-                <td><img class="img_table" src="images/papel.png"></td>
-                <td>PAPEL BLANCO MARCA: PAPER MAT</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td><a style="color: white;" href="edit_product.html">Editar producto</a></td>
-            </tr>
-            <tr>
-                <td><img class="img_table" src="images/papel.png"></td>
-                <td>PAPEL BLANCO MARCA: PAPER MAT</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td><a style="color: white;" href="edit_product.html">Editar producto</a></td>
-            </tr>
-            <tr>
-                <td><img class="img_table" src="images/papel.png"></td>
-                <td>PAPEL BLANCO MARCA: PAPER MAT</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td><a style="color: white;" href="edit_product.html">Editar producto</a></td>
-            </tr>
-            <tr>
-                <td><img class="img_table" src="images/papel.png"></td>
-                <td>PAPEL BLANCO MARCA: PAPER MAT</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td style="font-size: 30px;">$0.50</td>
-                <td><a style="color: white;" href="edit_product.html">Editar producto</a></td>
-            </tr>
-        </table>
-    </div>
-    <div style="height: 80px;" id="contenedor_btn">
-        <a id="btn_inv" href="vista_user.html">Regresar</a>
-    </div>
 
+    <h1 style="margin-left: 5%;">Pedidos</h1>
+
+    <?php
+        require("connection.php");
+
+        $query="SELECT * FROM pedidos";
+        $result=mysqli_query($connection, $query) or die ("Query error");
+
+        
+        $pedidos="<div class=\"inventario_container\"><table id=\"tabla_inv\">
+        <tr id=\"titulo_de_tabla\"><th>Cliente</th>
+        <th>Fecha</th>
+        <th>Formato de Pago</th>
+        <th>Formato de Envio</th>
+        <th>Estatus de Envio </th>
+        </tr><div class=\"productos_categoria\">";
+
+        while($fila=mysqli_fetch_assoc($result)){
+            $cliente=$fila['cliente'];
+            $fecha=$fila['fecha'];
+            $fPago=$fila['fPago'];
+            $fEnvio=$fila['fEnvio'];
+            $status=$fila['status'];
+            $pedidos=$pedidos."<tr id=\"tabla_de_productos\"><td>".$cliente."</td><td>".$fecha."</td><td>".$fPago."</td><td>".$fEnvio."</td><td>".$status."<a href=\"venta_cliente.html\"><img src=\"./images/edit.png\" width=\"20px\" height=\"20px\"></a></td></tr>";
+        }
+
+        $pedidos=$pedidos."</div></table></div>";
+        
+        echo $pedidos;
+        mysqli_close($connection);
+    ?>
+
+
+        
+
+    <div id="contenedor_btn">
+        <a id="Regresar_btn" href="vista_user.html">Regresar</a>
+    </div>
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
+</html>
