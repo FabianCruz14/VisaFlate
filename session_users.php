@@ -11,25 +11,24 @@ if(isset($_POST['submit'])){
          return $data;
      }
 
-     $ide = validate($_POST['identifier']);
+     $email = validate($_POST['email']);
      $password = validate($_POST['password']);
 
-     $eadmin = "SELECT nameA FROM administradores WHERE id='$ide' AND pass='$password'";   
+     $eadmin = "SELECT username FROM usuarios WHERE email='$email' AND pass='$password'";   
 
      $res = mysqli_query($connection, $eadmin) or die("Query error");
      $fila=mysqli_fetch_assoc($res);
      if($fila == NULL){
         mysqli_close($connection);
-        header("Location: login_admins.php?error=Correo o contraseña incorrecta");
+        header("Location: login_users.php?error=Correo o contraseña incorrecta");
         exit();
 
      }
      else{
         session_start();
         $_SESSION["ID"]=$fila;
-        
         mysqli_close($connection); 
-        header("Location: vista_user.php"); #bienvenida del admin 
+        header("Location: index_in.php"); 
         exit();         
      }
      

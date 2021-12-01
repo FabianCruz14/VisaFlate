@@ -1,5 +1,10 @@
+<?php
+        #require("connection.php");
+        session_start();
+        require("session.php"); 
+    ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,19 +14,12 @@
     <!-- para que funcione en la escala de any device-->
     <title>VISION_NET</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/6212ed9a55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-
-    <!-- JS to retrieve data from DB -->
-    <script type="text/javascript">
-        function changeUser() { 
-            document.getElementById("user").innerHTML = "user retrieved from DB";
-        }
-    </script>
 </head>
 
 <body>
-    <header>
+<header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
@@ -60,15 +58,15 @@
                                 Contacto</a>
                         </li>
                         <li>
-                            <a id="user" href="venta_cliente.html">
-                                Username</a>
+                            <a href="venta_cliente.html">
+                            <?php $var=implode($_SESSION["ID"]); echo $var; ?></a>
                         </li>
                         <li>
                             <a id="s-up" href="index.html">
                                 Cerrar Sesion</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart_in.html">
+                            <a id="cart" href="cart_in.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -77,48 +75,42 @@
             </div><!-- .container -->
         </nav><!-- #header-nav -->
     </header>
+    <div class="inventario_container">
+        <h1 style="color: #1115ee; font-weight: bold;">LAPICEROS</h1>
+        
+        <form action="guardar_carrito.php" method="post">
+        <?php
+            require("connection.php");
 
-    <div id="main_content" class="container">
-        <div class="jumbotron"></div>
+            $query="SELECT * FROM lapiceros";
+            $result=mysqli_query($connection, $query) or die ("Search error");
 
-        <h2 id="meet-us">Conoce nuestra amplia variedad de productos</h2>
-        <div id="home-tiles" class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a
-                    href="products.html#papeleria">
-                    <div id="papeleria-tile">
-                        <span>papeleria</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a
-                    href="products.html#merceria">
-                    <div id="merceria-tile">
-                        <span>merceria</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <a
-                    href="products.html#regalos">
-                    <div id="regalos-tile">
-                        <span>regalos</span>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-12 col-sm-6 col-xs-12">
-                <a href="https://goo.gl/maps/BEWZqYcAE3xPd4ot6" target="_blank">
-                    <div id="map-tile">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15083.225217929425!2d-98.1174052!3d19.072252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x909f0981e7568bca!2sVision_Net!5e0!3m2!1ses-419!2smx!4v1636326532300!5m2!1ses-419!2smx"
-                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </a>
-            </div>
-        </div><!-- End of #home-tiles -->
-    </div><!-- End of #main_content-->
+            
+                $lapices="<table id=\"tabla_inv\">
+                <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
+                <td>PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>AÑADIR AL CARRITO</td>
+                </tr>";
 
+                while($fila=mysqli_fetch_assoc($result)){
+                    $nombre=$fila['nombre'];
+                    $marca=$fila['marca'];
+                    $descripcion=$fila['descripcion'];
+                    $pVenta=$fila['pVenta'];
+                    $id=$fila['id'];
+                    $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>"."<input type=\"hidden\" name=\"id\" value=\"$id\"/>"."</td><td>"."<input type=\"hidden\" name=\"nombre\" value=\"$nombre\"/><label name=\"nombre\">$nombre</label>"." "."<input type=\"hidden\" name=\"marca\" value=\"$marca\"/><label name=\"marca\">$marca</label>"."<br><input type=\"hidden\" name=\"descripcion\" value=\"$descripcion\"/><label name=\"descripcion\">$descripcion</label>"."</td><td style=\"font-size: 30px;\">"."$"."<input type=\"hidden\" name=\"pVenta\" value=\"$pVenta\"/><label name=\"pVenta\">$pVenta</label>"."</td><td><input type=\"image\" class=\"img_table\" src=\"images/Untitled-Artwork.png\" alt=\"submit\"></td></tr>";
+                    
+                }
+
+                $lapices=$lapices."</table>";
+                
+                echo $lapices;
+                mysqli_close($connection);
+        ?>
+        </form>
+    </div>
+    
     <footer class="panel-footer">
         <div class="container">
             <div class="row">
@@ -141,11 +133,8 @@
             <div class="text-center" style="color: #f5c405;">&copy; Copyright VISION_NET 2021</div>
         </div>
     </footer>
-
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
-
-</html>

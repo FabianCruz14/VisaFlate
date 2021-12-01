@@ -12,40 +12,6 @@
 
 <body>
 
-<?php
-    if(isset($_POST['submit'])){
-        require("connection.php");  #siempre que se va a manipular info de la BD primero necesitamos hacer la conexion
-            
-         function validate($data){
-            $data = trim($data);
-            $data = stripslashes($data);
-             $data = htmlspecialchars($data);
-            return $data;
-        }
-
-        $email = validate($_POST['email']);
-        $password = validate($_POST['password']);
-
-        $euser = "SELECT username FROM usuarios WHERE email='$email' AND pass='$password'";   
-
-        $res = mysqli_query($connection, $euser) or die("Query error");
-
-        if(mysqli_num_rows($res) === 1){
-            $row = mysqli_fetch_assoc($res);
-            #print_r $row['username'];  #falta recuperar el username
-            header("Location: index_in.html");
-            exit();
-        }
-        else{
-            header("Location: login_users.php?error=Correo o contraseña incorrecta");
-            exit();
-        }
-        mysqli_close($connection);
-    }          
-?>
-
-
-
     <header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
@@ -93,7 +59,7 @@
                                 Crear cuenta</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.html">
+                            <a id="cart" href="cart.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -105,7 +71,7 @@
 
     
 
-    <form class="formulario" method="post">
+    <form class="formulario" action="session_users.php" method="post">
         <h1 id="login-title">Iniciar Sesi&oacuten</h1>
         <?php if (isset($_GET['error'])) { ?>
             <p class="error"><?php echo $_GET['error']; ?></p>

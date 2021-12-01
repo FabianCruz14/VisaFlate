@@ -64,7 +64,7 @@
                                 Crear cuenta</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.html">
+                            <a id="cart" href="cart.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -76,10 +76,6 @@
 
     <div class="inventario_container">
         <h1 style="color: #1115ee; font-weight: bold;">LAPICES</h1>
-        <div class="busqueda_container">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
-        </div>
         
         <form action="guardar_carrito.php" method="post">
         <?php
@@ -102,7 +98,9 @@
                     $descripcion=$fila['descripcion'];
                     $pVenta=$fila['pVenta'];
                     $id=$fila['id'];
-                    $lapices=$lapices."<tr id=\"tabla_de_productos\"><td><input type=\"hidden\" name=\"id\" value=\"$id\"/></td><td><input type=\"hidden\" name=\"nombre\" value=\"$nombre\"/><label name=\"nombre\">$nombre</label><input type=\"hidden\" name=\"marca\" value=\"$marca\"/><label name=\"marca\">$marca</label><br><input type=\"hidden\" name=\"descripcion\" value=\"$descripcion\"/><label name=\"descripcion\">$descripcion</label></td><td style=\"font-size: 30px;\">$<input type=\"hidden\" name=\"pVenta\" value=\"$pVenta\"/><label name=\"pVenta\">$pVenta</label></td><td><input type=\"image\" class=\"img_table\" src=\"images/Untitled-Artwork.png\" alt=\"submit\"></td></tr>";
+                    $img=$fila['img'];
+                    #<td><img src='uploads/$row[6].jpg' height='150px' width='300px'></td>
+                    $lapices=$lapices."<tr id=\"tabla_de_productos\"><td><img src=<?php echo $img.\".jpg\" ?> height=\"10px\" width=\"10px\"></td><td><input type=\"hidden\" name=\"id\" value=\"$id\"/></td><td><input type=\"hidden\" name=\"nombre\" value=\"$nombre\"/><label name=\"nombre\">$nombre</label><input type=\"hidden\" name=\"marca\" value=\"$marca\"/><label name=\"marca\">$marca</label><br><input type=\"hidden\" name=\"descripcion\" value=\"$descripcion\"/><label name=\"descripcion\">$descripcion</label></td><td style=\"font-size: 30px;\">$<input type=\"hidden\" name=\"pVenta\" value=\"$pVenta\"/><label name=\"pVenta\">$pVenta</label></td><td><input type=\"image\" class=\"img_table\" src=\"images/Untitled-Artwork.png\" alt=\"submit\"></td></tr>";
                     
                 }
 

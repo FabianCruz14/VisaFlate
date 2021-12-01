@@ -1,3 +1,8 @@
+<?php
+        #require("connection.php");
+        session_start();
+        require("session.php"); 
+    ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+<header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
@@ -37,27 +42,27 @@
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="index.html">
+                            <a href="index_in.html">
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="products.html">
+                            <a href="products_in.html">
                                 Productos</a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="contact_in.html">
                                 Contacto</a>
                         </li>
                         <li>
-                            <a href="login_users.php">
-                                Iniciar sesi&oacuten</a>
+                            <a href="venta_cliente.html">
+                            <?php $var=implode($_SESSION["ID"]); echo $var; ?></a>
                         </li>
                         <li>
-                            <a id="s-up" href="signup.html" >
-                                Crear cuenta</a>
+                            <a id="s-up" href="index.html">
+                                Cerrar Sesion</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.php">
+                            <a id="cart" href="cart_in.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -108,8 +113,8 @@
         <input type=\"radio\" id=\"envio_nacional\" name=\"envios\" value=\"envio_nacional\">
         <label for=\"envio_nacional\">ENVIO NACIONAL</label><br>
         <label for=\"direccion\">Direccion:</label>
-        <input type=\"text\" id=\"direccion\" name=\"direccion\"><h5>Por ahora se cobrara el minimo costo de envio, despues de pesar tu pedido se enviara un email con el cargo de envio actualizado.</h5></div></td>
-        
+        <input type=\"text\" id=\"direccion\" name=\"direccion\"></div></td>
+        <h5>Por ahora se cobrara el minimo costo de envio, despues de pesar tu pedido se enviara un email con el cargo de envio actualizado.</h5>
         <td class=\"th_c\"><div class=\"modo_de_envio\">
         <input type=\"radio\" id=\"deposito\" name=\"pagos\" value=\"deposito\">
         <label for=\"deposito\">Deposito a cuenta de banco</label><br>

@@ -1,3 +1,9 @@
+
+<?php
+        #require("connection.php");
+        session_start();
+        require("session.php");
+    ?>
 <!doctype html>
 <html lang="es-mx">
 
@@ -43,10 +49,7 @@
 </head>
 
 <body>
-    <?php
-        #require("connection.php");
-        require("session.php");
-    ?>
+    
     
     <header>
         <nav id="header-nav" class="navbar navbar-default">
@@ -80,7 +83,7 @@
                             <!--cuenta -->
                         </li>
                         <li>
-                            <a id="s-up" href="signup.html">
+                            <a id="s-up" href="logout.php">
                                 Cerrar Sesion</a>
                         </li>
                     </ul><!-- #nav-list -->
@@ -95,16 +98,15 @@
             <div class="row">
                 <div class="col-1">
                     <div id="wb_Text1">
-                        <span style="color:#000000;font-family:Arial;font-size:53px;">BIENVENIDO, <i><?php echo $login_session; ?></i></span><span
-                            style="color:#000000;font-family:Arial;font-size:35px;"><br></span>
+                        <span style="color:#000000;font-family:Arial;font-size:53px;">Bienvenido, <?php $var=implode($_SESSION["ID"]); echo $var; ?></span>
+                        <!--<span>style="color:#000000;font-family:Arial;font-size:35px;"><br></span>-->
                     </div>
                     <div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:4;">
-                        <img src="images/Usuario.png" id="Image1" alt="">
-                    </div>
-                    <div id="wb_Text2">
+                        <img src="./images\<?php echo $var ?>.jpg" id="Image1">
+                    </div>  
+                    <div id="wb_Text2"> 
                         <span style="color:#000000;font-family:Arial;font-size:20px;"><br><br></span><span
-                            style="color:#000000;font-family:Arial;font-size:24px;">Tu ID es: A001 con fecha de
-                            creacion<br> 06/10/2021 y expira el 06/10/2022</span>
+                            style="color:#000000;font-family:Arial;font-size:24px;">Tu ID es: A001 y expira el 06/10/2022</span>
                     </div>
                 </div>
                 <div class="col-2">

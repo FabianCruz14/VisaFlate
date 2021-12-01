@@ -24,7 +24,7 @@
         mysqli_query($connection, $query) or die("Registry error");
         echo'<script type="text/javascript">
             alert("Cambios guardados");
-            window.location.href="vista_user.html";
+            window.location.href="vista_user.php";
         </script>';
 
         mysqli_close($connection);  #cerramos conexion con la bd

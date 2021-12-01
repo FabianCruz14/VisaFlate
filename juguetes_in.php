@@ -1,3 +1,8 @@
+<?php
+        #require("connection.php");
+        session_start();
+        require("session.php"); 
+    ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,7 +19,7 @@
 </head>
 
 <body>
-    <header>
+<header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
@@ -41,27 +46,27 @@
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="index.html">
+                            <a href="index_in.html">
                                 Inicio</a>
                         </li>
                         <li>
-                            <a href="products.html">
+                            <a href="products_in.html">
                                 Productos</a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="contact_in.html">
                                 Contacto</a>
                         </li>
                         <li>
-                            <a href="login_users.php">
-                                Iniciar sesi&oacuten</a>
+                            <a href="venta_cliente.html">
+                            <?php $var=implode($_SESSION["ID"]); echo $var; ?></a>
                         </li>
                         <li>
-                            <a id="s-up" href="signup.html" >
-                                Crear cuenta</a>
+                            <a id="s-up" href="index.html">
+                                Cerrar Sesion</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.php">
+                            <a id="cart" href="cart_in.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -71,13 +76,13 @@
         </nav><!-- #header-nav -->
     </header>
     <div class="inventario_container">
-        <h1 style="color: #1115ee; font-weight: bold;">LAPICEROS</h1>
+        <h1 style="color: #1115ee; font-weight: bold;">JUGUETES</h1>
         
         <form action="guardar_carrito.php" method="post">
         <?php
             require("connection.php");
 
-            $query="SELECT * FROM lapiceros";
+            $query="SELECT * FROM juguetes";
             $result=mysqli_query($connection, $query) or die ("Search error");
 
             

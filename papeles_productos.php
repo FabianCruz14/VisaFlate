@@ -61,7 +61,7 @@
                                 Crear cuenta</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.html">
+                            <a id="cart" href="cart.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -70,13 +70,9 @@
             </div><!-- .container -->
         </nav><!-- #header-nav -->
     </header>
-    <div class="inventario_container">
-        <h1 name="papeles" style="color: #1115ee; font-weight: bold;">PAPELES</h1>
-        <div class="busqueda_container">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
-        </div>
-      
+    <<div class="inventario_container">
+        <h1 style="color: #1115ee; font-weight: bold;">PAPELES</h1>
+        
         <form action="guardar_carrito.php" method="post">
         <?php
             require("connection.php");

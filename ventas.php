@@ -18,13 +18,13 @@
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="vista_user.html" class="pull-left">
+                    <a href="vista_user.php" class="pull-left">
                         <!-- visible-md visible-lg -->
                         <div class="hidden-xs hidden-sm" id="logo-img"></div>
                     </a>
 
                     <div class="navbar-brand">
-                        <a href="vista_user.html">
+                        <a href="vista_user.php">
                             <h1>VISION_NET</h1>
                         </a>
                     </div>
@@ -41,7 +41,7 @@
                 <div id="collapsable-nav" class="collapse navbar-collapse">
                     <ul id="nav-list" class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="vista_user.html">
+                            <a href="vista_user.php">
                                 CUENTA</a>
                         </li>
                         <li>
@@ -102,7 +102,7 @@
         
 
     <div id="contenedor_btn">
-        <a id="Regresar_btn" href="vista_user.html">Regresar</a>
+        <a id="Regresar_btn" href="vista_user.php">Regresar</a>
     </div>
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-2.1.4.min.js"></script>

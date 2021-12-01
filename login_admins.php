@@ -11,41 +11,7 @@
 
 <body>
 
-<?php
-    if(isset($_POST['submit'])){
-       # session_start();
-        require("connection.php");  #siempre que se va a manipular info de la BD primero necesitamos hacer la conexion
-            
-         function validate($data){
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
 
-        $id = validate($_POST['identifier']);
-        $password = validate($_POST['password']);
-
-        $eadmin = "SELECT nameA FROM administradores WHERE id='$id' AND pass='$password'";   
-
-        $res = mysqli_query($connection, $eadmin) or die("Query error");
-
-        if(mysqli_num_rows($res) === 1){
-            $row = mysqli_fetch_assoc($res);
-            #print_r $row['username'];  #falta recuperar el username
-            mysqli_close($connection);
-           # $_SESSION['newsession']=$id;
-            header("Location: vista_user.html"); #bienvenida del admin !!!!!!!!!!!!
-            exit();
-        }
-        else{
-            mysqli_close($connection);
-            header("Location: login_admins.php?error=Correo o contraseña incorrecta");
-            exit();
-        }
-        
-    }          
-?>
     <header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container">
@@ -103,7 +69,7 @@
         </nav><!-- #header-nav -->
     </header>
 
-    <form class="formulario" method="POST">
+    <form class="formulario" action="session.php" method="POST">
         <h1 id="login-title">Bienvenido, Admin</h1>
         <?php if (isset($_GET['error'])) { ?>
             <p class="error"><?php echo $_GET['error']; ?></p>
