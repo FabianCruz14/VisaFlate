@@ -85,8 +85,7 @@
         while($fila=mysqli_fetch_assoc($result)){
             $datos=$fila['datos'];
             $precio=$fila['precio'];
-            $carro=$carro."<tr class=\"tablatr\"><td>".$fila['']."</td><td class=\"th_c\">"."<div class=\"cart-info\">"."<div><p class=\"th_c nombre_producto cart-item-title\">$datos</p><br><button class=\"btEliminar\"><small>Eliminar</small></button></div></div></td><td class=\"cart-quantity-input th_c\"><input type=\"number\" value=\"1\"></td><td class=\"th_c cart-price\">$".$precio."</td></tr>";
-
+            $carro=$carro."<tr class=\"tablatr\"><td>".$fila['']."</td><td class=\"th_c\">"."<div class=\"cart-info\">"."<div><p class=\"th_c nombre_producto cart-item-title\">$datos</p><h5 class=\"cart-price\">$$precio</h5><br><button class=\"btEliminar\"><small>Eliminar</small></button></div></div></td><td class=\"th_c\"><input class=\"cart-quantity-input\" type=\"number\" value=\"1\"></td><td class=\"th_c subtotal\">$".$precio."</td></tr>";
 
         }
         
@@ -110,6 +109,7 @@
         <label for=\"envio_nacional\">ENVIO NACIONAL</label><br>
         <label for=\"direccion\">Direccion:</label>
         <input type=\"text\" id=\"direccion\" name=\"direccion\"></div></td>
+        <h5>Por ahora se cobrara el minimo costo de envio, despues de pesar tu pedido se enviara un email con el cargo de envio actualizado.</h5>
         <td class=\"th_c\"><div class=\"modo_de_envio\">
         <input type=\"radio\" id=\"deposito\" name=\"pagos\" value=\"deposito\">
         <label for=\"deposito\">Deposito a cuenta de banco</label><br>
@@ -117,7 +117,7 @@
         <input type=\"radio\" id=\"Efectivo\" name=\"pagos\" value=\"Efectivo\">
         <label for=\"Efectivo\">Efectivo</label><br>
         <small>Solo aplica a puntos de entrega</small></div></td>
-        <td class=\"th_c\">$50.00</td></tr>
+        <td class=\"th_c cart-total-envio\">$50.00</td></tr>
         </table></div>";
 
         $precio="<div class=\"cart-page\">
@@ -125,15 +125,15 @@
             <table>
                 <tr>
                     <td class=\"th_c\">Subtotal</td>
-                    <td class=\"th_c\">$200.00</td>
+                    <td class=\"th_c cart-total-subtotal\">$200.00</td>
                 </tr>
                 <tr>
                     <td class=\"th_c\">Envio</td>
-                    <td class=\"th_c\">$200.00</td>
+                    <td class=\"th_c cart-total-envio\">$200.00</td>
                 </tr>
                 <tr>
-                    <td class=\"cart-total-price th_c\">Total</td>
-                    <td class=\"th_c\">$200.00</td>
+                    <td class=\"th_c\">Total</td>
+                    <td class=\"th_c cart-total-price\">$200.00</td>
                 </tr>
             </table>
         </div>
@@ -153,7 +153,7 @@
         mysqli_close($connection);
     ?>
     
-     <!--                               
+                                  
         
     <footer class="panel-footer">
         <div class="container">
