@@ -61,7 +61,7 @@
                                 Crear cuenta</a>
                         </li>
                         <li style="padding-left: 15px;">
-                            <a id="cart" href="cart.html">
+                            <a id="cart" href="cart.php">
                                 <div id="cart-img"></div>
                             </a>
                         </li>
@@ -71,52 +71,39 @@
         </nav><!-- #header-nav -->
     </header>
     <div class="inventario_container">
-        <h1 name="bisuteria" style="color: #1115ee; font-weight: bold;">BISUTERIA</h1>
-        <div class="busqueda_container">
-            <i class="fa fa-search"></i>
-            <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
-        </div>
-      
+        <h1 style="color: #1115ee; font-weight: bold;">BISUTERIA</h1>
+        
+        <form action="guardar_carrito.php" method="post">
         <?php
             require("connection.php");
 
             $query="SELECT * FROM bisuteria";
             $result=mysqli_query($connection, $query) or die ("Search error");
 
-<<<<<<< HEAD:bisuteria_productos.php
-            $lapices="<table id=\"tabla_inv\">
-            <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
-            <td>PRODUCTO</td>
-            <td>PRECIO</td>
-            <td>EN EXISTENCIA</td>
-            <td>AÑADIR AL CARRITO</td>
-            </tr>";
+            
+                $lapices="<table id=\"tabla_inv\">
+                <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
+                <td>PRODUCTO</td>
+                <td>PRECIO</td>
+                <td>AÑADIR AL CARRITO</td>
+                </tr>";
 
-            while($fila=mysqli_fetch_assoc($result)){
-                $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>".$fila['']."</td><td>".$fila['nombre']." ".$fila['marca']."<br>".$fila['descripcion']."</td><td style=\"font-size: 30px;\">"."$".$fila['pVenta']."</td><td style=\"font-size: 30px;\">".$fila['unidades']."</td><td><a href=\"cart.html\"><img class=\"img_table\" src=\"images/Untitled-Artwork.png\"></a></td></tr>";
-            }
+                while($fila=mysqli_fetch_assoc($result)){
+                    $nombre=$fila['nombre'];
+                    $marca=$fila['marca'];
+                    $descripcion=$fila['descripcion'];
+                    $pVenta=$fila['pVenta'];
+                    $id=$fila['id'];
+                    $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>"."<input type=\"hidden\" name=\"id\" value=\"$id\"/>"."</td><td>"."<input type=\"hidden\" name=\"nombre\" value=\"$nombre\"/><label name=\"nombre\">$nombre</label>"." "."<input type=\"hidden\" name=\"marca\" value=\"$marca\"/><label name=\"marca\">$marca</label>"."<br><input type=\"hidden\" name=\"descripcion\" value=\"$descripcion\"/><label name=\"descripcion\">$descripcion</label>"."</td><td style=\"font-size: 30px;\">"."$"."<input type=\"hidden\" name=\"pVenta\" value=\"$pVenta\"/><label name=\"pVenta\">$pVenta</label>"."</td><td><input type=\"image\" class=\"img_table\" src=\"images/Untitled-Artwork.png\" alt=\"submit\"></td></tr>";
+                    
+                }
 
-            $lapices=$lapices."</table>";
-
-            echo $lapices;
-            mysqli_close($connection);
-        ?>
-=======
-            <tr id= "tabla_de_productos">
-                <td><img class="img_table" src="images/r_bisuteria.jpg"></td>
-                <td>Pulceras de oro laminado</td>
-                <td style="font-size: 30px;">$200</td>
-                <td style="font-size: 30px;">7</td>
-           
-                    <td>
-                        <a href="cart.html">
-                            <img class="img_table add_to_cart" src="images/Untitled-Artwork.png">
-                        </a>
-                    </td>
+                $lapices=$lapices."</table>";
                 
-            </tr>
-        </table>  
->>>>>>> 485d970e552683752bf1e21c499cf623ef108ba7:bisuteria_productos.html
+                echo $lapices;
+                mysqli_close($connection);
+        ?>
+        </form>
     </div>
     <footer class="panel-footer">
         <div class="container">
