@@ -24,12 +24,14 @@
         
         $query="INSERT INTO $category values ('$ide', '$nombre', '$marca', '$description', '$size', '$color', '$units', '$price', '$sale')";
         mysqli_query($connection, $query) or die("Registry error");
+
+        mysqli_close($connection);  #cerramos conexion con la bd
         echo'<script type="text/javascript">
             alert("Producto registrado");
             window.location.href="inventario.html";
         </script>';
 
-        mysqli_close($connection);  #cerramos conexion con la bd
+        
     ?>
 </body>
 </html>

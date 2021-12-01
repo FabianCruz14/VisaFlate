@@ -78,68 +78,40 @@
         <h1 style="color: #1115ee; font-weight: bold;">LAPICES</h1>
         <div class="busqueda_container">
             <i class="fa fa-search"></i>
-            <input type="text" placeholder="Buscar.." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
+            <input type="text" placeholder="Buscar..." name="busqueda" id="busqueda_prods" style="margin-left: 0%;">
         </div>
         
-        
+        <form action="guardar_carrito.php" method="post">
         <?php
             require("connection.php");
 
-<<<<<<< HEAD:lapices_productos.php
             $query="SELECT * FROM lapices";
             $result=mysqli_query($connection, $query) or die ("Search error");
 
-            $lapices="<table id=\"tabla_inv\">
-            <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
-            <td>PRODUCTO</td>
-            <td>PRECIO</td>
-            <td>EN EXISTENCIA</td>
-            <td>AÑADIR AL CARRITO</td>
-            </tr>";
-
-            while($fila=mysqli_fetch_assoc($result)){
-                $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>".$fila['']."</td><td>".$fila['nombre']." ".$fila['marca']."<br>".$fila['descripcion']."</td><td style=\"font-size: 30px;\">"."$".$fila['pVenta']."</td><td style=\"font-size: 30px;\">".$fila['unidades']."</td><td><a href=\"cart.html\"><img class=\"img_table\" src=\"images/Untitled-Artwork.png\"></a></td></tr>";
-            }
-
-            $lapices=$lapices."</table>";
-
-            echo $lapices;
-            mysqli_close($connection);
-        ?>
-
-=======
-            <tr id="titulo_de_tabla">
-                <td>FOTOGRAFIA</td>
+            
+                $lapices="<table id=\"tabla_inv\">
+                <tr id=\"titulo_de_tabla\"><td>IMAGEN</th>
                 <td>PRODUCTO</td>
-                <td>MARCA</td>
                 <td>PRECIO</td>
-                <td>EN EXISTENCIA</td>
                 <td>AÑADIR AL CARRITO</td>
-            </tr>
-            <div class="productos_categoria">
-            <tr id= "tabla_de_productos">
-                <td><img class="img_table shop-item-image" src="images/lapices_de_color.jpg"></td>
-                <td class="shop-item-title">Lapices de Color</td>
-                <td>Mapita</td>
-                <td style="font-size: 30px;" class="shop-item-price">$16</td>
-                <td style="font-size: 30px;">5</td>
-                    <td>
-                            <button class="shop-item-button" type="button">AGREGAR A CARRITO</button>
-                    </td>
-            </tr>
-            <tr id= "tabla_de_productos">
-                <td><img class="img_table shop-item-image" src="images/lapices-para-dibujo.jpg"></td>
-                <td class="shop-item-title">Lapices de grafito</td>
-                <td>Mapita</td>
-                <td style="font-size: 30px;" class="shop-item-price">$18</td>
-                <td style="font-size: 30px;">5</td>
-                    <td>
-                            <button class="shop-item-button" type="button">AGREGAR A CARRITO</button>
-                    </td>
-            </tr>
-        </div>
-        </table> 
->>>>>>> 485d970e552683752bf1e21c499cf623ef108ba7:lapices_productos.html
+                </tr>";
+
+                while($fila=mysqli_fetch_assoc($result)){
+                    $nombre=$fila['nombre'];
+                    $marca=$fila['marca'];
+                    $descripcion=$fila['descripcion'];
+                    $pVenta=$fila['pVenta'];
+                    $id=$fila['id'];
+                    $lapices=$lapices."<tr id=\"tabla_de_productos\"><td>"."<input type=\"hidden\" name=\"id\" value=\"$id\"/>"."</td><td>"."<input type=\"hidden\" name=\"nombre\" value=\"$nombre\"/><label name=\"nombre\">$nombre</label>"." "."<input type=\"hidden\" name=\"marca\" value=\"$marca\"/><label name=\"marca\">$marca</label>"."<br><input type=\"hidden\" name=\"descripcion\" value=\"$descripcion\"/><label name=\"descripcion\">$descripcion</label>"."</td><td style=\"font-size: 30px;\">"."$"."<input type=\"hidden\" name=\"pVenta\" value=\"$pVenta\"/><label name=\"pVenta\">$pVenta</label>"."</td><td><input type=\"image\" class=\"img_table\" src=\"images/Untitled-Artwork.png\" alt=\"submit\"></td></tr>";
+                    
+                }
+
+                $lapices=$lapices."</table>";
+                
+                echo $lapices;
+                mysqli_close($connection);
+        ?>
+        </form>
     </div>
     
     <footer class="panel-footer">
